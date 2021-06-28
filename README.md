@@ -2,6 +2,6 @@
 
 Name possible to change:
 <br/>
-# SpaceFight?
+SpaceFight
 <br/>
-# Fight-or-Flight?
+Fight/Flight

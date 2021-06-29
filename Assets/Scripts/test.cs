@@ -12,14 +12,8 @@ public class test : MonoBehaviour
 
     void Start()
     {
-        if (!isPaused)
-        {
-            Cursor.lockState = CursorLockMode.Locked;
-
-        }else{
-            Cursor.lockState = CursorLockMode.None;
-
-        }
+        Cursor.lockState = CursorLockMode.Locked;
+        Cursor.visible = false;
     }
 
 

@@ -11,4 +11,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Arena.unity
     guid: 79fb2d10ec0aab64a997a267bed21be3
+  - enabled: 1
+    path: Assets/Scenes/TutorialLevel.unity
+    guid: 0cbdea044aca39b4fb40243b69783cee
   m_configObjects: {}

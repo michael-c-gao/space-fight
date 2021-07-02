@@ -7,7 +7,7 @@ public class Menu : MonoBehaviour
 {
     public void Play()
     {
-        SceneManager.LoadScene("Arena");
+        SceneManager.LoadScene("LevelSelect");
     }
 
     public void Tutorial()

@@ -28,6 +28,13 @@ public class test2 : MonoBehaviour
         bewl[0] = empty;
     }
 
+    public void returnToMenu()
+    {
+        SceneManager.LoadScene("Menu");
+    }
+
+
+
     public void RClick()
     {
         int x = buttonArray.Length;

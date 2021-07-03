@@ -5,8 +5,9 @@ using UnityEngine;
 public class move : MonoBehaviour
 {
     public CharacterController CC;
-    public float movementSpeed = 15f;
-    public float sprintSpeed = 35f;
+    public float movementSpeed;
+    public float startSpeed;
+    public float sprintSpeed;
     public float timer = 0f;
     public float timer2 = 0f;
     public int timer3 = 0;
@@ -16,7 +17,7 @@ public class move : MonoBehaviour
     void Update()
     {
 
-        movementSpeed = 15f;
+        movementSpeed = startSpeed;
         float horizontal = Input.GetAxis("Horizontal");
         float vertical = Input.GetAxis("Vertical");
         

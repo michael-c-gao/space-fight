@@ -11,8 +11,8 @@ What to Add:
 
 <br/>~~Create 3D Hollow Sphere Arena (Blender3D)~~
 <br/>~~Sprinting time limit~~
+<br/>~~Arrow that points to location of enemy~~
 <br/>Player Models (Blender3D)
-<br/>Arrow that points to location of enemy
 <br/>Player Animations (blender? not sure)
 <br/>Player Punch, Kick, Block
 <br/>Player Special Abilities

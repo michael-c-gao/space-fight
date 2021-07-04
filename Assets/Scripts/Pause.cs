@@ -8,6 +8,7 @@ public class Pause : MonoBehaviour
 
     public GameObject pausemenu;
     public static bool isPaused = false;
+    public static bool inControls = false;
     
     void Start()
     {
@@ -41,7 +42,12 @@ public class Pause : MonoBehaviour
 
     public void Controls()
     {
-        
+        inControls = true;
+    }
+
+    public void Return()
+    {
+        inControls = false;
     }
 
 
@@ -58,7 +64,7 @@ public class Pause : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Alpha1))
+        if (Input.GetKeyDown(KeyCode.Alpha1) && !inControls)
         {
             if (isPaused)
             {

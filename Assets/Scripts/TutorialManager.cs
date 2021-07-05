@@ -13,7 +13,20 @@ public class TutorialManager : MonoBehaviour
     private static bool pressedD = false;
 
 
+    void ShiftHold()
+    {
+        if (Input.GetKeyUp("left shift")){
+            tutorialIndex += 1;
+        }
+    }
 
+
+    void SpacePress()
+    {
+        if (Input.GetKeyUp(KeyCode.Space)){
+            tutorialIndex += 1;
+        }
+    }
 
 
     void WASDPress()
@@ -38,7 +51,6 @@ public class TutorialManager : MonoBehaviour
         {
             tutorialIndex += 1;
         }
-        print(tutorialIndex);
 
     }
 
@@ -60,7 +72,7 @@ public class TutorialManager : MonoBehaviour
                 tutorialArray[i].SetActive(false);
             }
         }
-        if (tutorialIndex != 1)
+        if (tutorialIndex != 1 && tutorialIndex != 4 && tutorialIndex != 5)
         {
             if (Input.GetKeyDown(KeyCode.E))
             {
@@ -69,7 +81,19 @@ public class TutorialManager : MonoBehaviour
         }
         else
         {
-            WASDPress();
+            if(tutorialIndex == 1)
+            {
+                WASDPress();
+            }
+            else if(tutorialIndex == 4)
+            {
+                ShiftHold();
+            }
+            else
+            {
+                SpacePress();
+            }
+           
         }
     }
 }

@@ -4,8 +4,7 @@ using UnityEngine;
 
 public class PlayerAttack : MonoBehaviour
 {
-   
-
+ 
     void Punch()
     {
         print("Punch");

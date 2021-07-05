@@ -9,6 +9,7 @@ public class loadCharacter : MonoBehaviour
 
     void Start()
     {
+        ClockCountdown.timeLeft = 100;
         int character = PlayerPrefs.GetInt("character");
         characterLoad[character].SetActive(true);
     }

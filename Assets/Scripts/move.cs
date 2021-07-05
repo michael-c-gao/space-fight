@@ -8,9 +8,9 @@ public class move : MonoBehaviour
     public float movementSpeed;
     public float startSpeed;
     public float sprintSpeed;
-    public float timer = 0f;
-    public float timer2 = 0f;
-    public int timer3 = 0;
+    public float accumulatedSprintTime = 0f;
+    public float sprintRecharge = 0f;
+    public int intSprintRecharge = 0;
     public Vector3 movement;
 
 
@@ -25,24 +25,27 @@ public class move : MonoBehaviour
         Vector3 moveVector = (transform.right * horizontal) + (transform.forward * vertical);
 
 
-        if (Input.GetKey(KeyCode.LeftShift) && timer <= 3f){
+        if (Input.GetKey(KeyCode.LeftShift) && accumulatedSprintTime <= 3f){
             
             movementSpeed = sprintSpeed;
-            timer += Time.deltaTime;
+            accumulatedSprintTime += Time.deltaTime;
         }
 
-        if (timer >= 2.9f)
+        if (accumulatedSprintTime >= 2.9f)
         {
-            timer2 += 1 * Time.deltaTime;
-            timer3 = Mathf.RoundToInt(timer2);
+            sprintRecharge += 1 * Time.deltaTime;
+            intSprintRecharge = Mathf.RoundToInt(sprintRecharge);
 
-            if(timer3 % 5 == 0 && timer3 != 0)
+            if(intSprintRecharge % 5 == 0 && intSprintRecharge != 0)
             {
 
-                timer = 0; timer2 = 0; timer3 = 0;
+                accumulatedSprintTime = 0; 
+                sprintRecharge = 0; 
+                intSprintRecharge = 0;
             }
         }
+
         movement = moveVector;
-            CC.Move(moveVector * movementSpeed * Time.deltaTime);
+        CC.Move(moveVector * movementSpeed * Time.deltaTime);
     }
 }

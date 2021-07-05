@@ -8,7 +8,7 @@ public class dash : MonoBehaviour
     public float dashSpeed;
     public float dashTime;
     public float cooldown;
-    private float lastAttacked = -9999f;
+    private float lastDashed = -9999f;
 
 
     void Start()
@@ -22,10 +22,10 @@ public class dash : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.Space))
         {
-            if (Time.time > lastAttacked + cooldown)
+            if (Time.time > lastDashed + cooldown)
             {
                 StartCoroutine(Dash());
-                lastAttacked = Time.time;
+                lastDashed = Time.time;
             }
 
 

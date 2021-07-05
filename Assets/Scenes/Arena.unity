@@ -1677,7 +1677,7 @@ Transform:
   - {fileID: 6016209642628851530}
   - {fileID: 5876361737061262575}
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1305391274
 GameObject:
@@ -3027,7 +3027,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2049823872 stripped
 GameObject:
@@ -3425,6 +3425,7 @@ MonoBehaviour:
   timer: 0
   timer2: 0
   timer3: 0
+  movement: {x: 0, y: 0, z: 0}
 --- !u!114 &5876361738369797240
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3521,6 +3522,8 @@ GameObject:
   - component: {fileID: 5876361738369797237}
   - component: {fileID: 5876361738369797242}
   - component: {fileID: 5876361738369797236}
+  - component: {fileID: 5876361738369797245}
+  - component: {fileID: 5876361738369797248}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -3528,6 +3531,21 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &5876361738369797245
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5876361738369797244}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 73c064b69dc2f644992ea76a809fdea6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dashSpeed: 75
+  dashTime: 0.2
+  cooldown: 1
 --- !u!20 &5876361738369797246
 Camera:
   m_ObjectHideFlags: 0
@@ -3579,6 +3597,18 @@ AudioListener:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5876361738369797244}
   m_Enabled: 1
+--- !u!114 &5876361738369797248
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5876361738369797244}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d8470399e69435d4e933f354b79d1124, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &6016209640783433680
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3598,6 +3628,7 @@ MonoBehaviour:
   timer: 0
   timer2: 0
   timer3: 0
+  movement: {x: 0, y: 0, z: 0}
 --- !u!135 &6016209640783433681
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -3627,6 +3658,8 @@ GameObject:
   - component: {fileID: 6016209640783433680}
   - component: {fileID: 6016209640783433695}
   - component: {fileID: 6016209640783433681}
+  - component: {fileID: 6016209640783433697}
+  - component: {fileID: 6016209640783433696}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -3765,6 +3798,33 @@ CharacterController:
   m_SkinWidth: 0.08
   m_MinMoveDistance: 0.001
   m_Center: {x: 0, y: 0, z: 3}
+--- !u!114 &6016209640783433696
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6016209640783433689}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d8470399e69435d4e933f354b79d1124, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &6016209640783433697
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6016209640783433689}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 73c064b69dc2f644992ea76a809fdea6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dashSpeed: 75
+  dashTime: 0.3
+  cooldown: 2
 --- !u!1 &6016209642590148054
 GameObject:
   m_ObjectHideFlags: 0
@@ -4044,6 +4104,7 @@ MonoBehaviour:
   timer: 0
   timer2: 0
   timer3: 0
+  movement: {x: 0, y: 0, z: 0}
 --- !u!135 &6320354423223324657
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -4073,6 +4134,8 @@ GameObject:
   - component: {fileID: 6320354423223324656}
   - component: {fileID: 6320354423223324671}
   - component: {fileID: 6320354423223324657}
+  - component: {fileID: 6320354423223324673}
+  - component: {fileID: 6320354423223324672}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -4211,6 +4274,33 @@ CharacterController:
   m_SkinWidth: 0.08
   m_MinMoveDistance: 0.001
   m_Center: {x: 0, y: 0, z: 3}
+--- !u!114 &6320354423223324672
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6320354423223324665}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d8470399e69435d4e933f354b79d1124, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &6320354423223324673
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6320354423223324665}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 73c064b69dc2f644992ea76a809fdea6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dashSpeed: 75
+  dashTime: 0.2
+  cooldown: 1
 --- !u!1 &7168856366176890192
 GameObject:
   m_ObjectHideFlags: 0

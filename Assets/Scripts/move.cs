@@ -11,6 +11,7 @@ public class move : MonoBehaviour
     public float timer = 0f;
     public float timer2 = 0f;
     public int timer3 = 0;
+    public Vector3 movement;
 
 
 
@@ -41,7 +42,7 @@ public class move : MonoBehaviour
                 timer = 0; timer2 = 0; timer3 = 0;
             }
         }
-
+        movement = moveVector;
             CC.Move(moveVector * movementSpeed * Time.deltaTime);
     }
 }

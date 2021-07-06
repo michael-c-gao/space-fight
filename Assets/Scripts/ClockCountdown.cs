@@ -7,15 +7,27 @@ public class ClockCountdown : MonoBehaviour
 {
     public TextMeshProUGUI clock;
     public static int timeLeft = 100;
-
+    public bool subtractSecond = false;
 
     void Start()
     {
         timeLeft = 100;
     }
 
+    IEnumerator Countdown()
+    {
+        subtractSecond = true;
+        timeLeft -= 1;
+        yield return new WaitForSeconds(1);
+        subtractSecond = false;
+    }
+
     void Update()
     {
-        clock.text = "Time Remaining: " + (timeLeft - Mathf.Floor(Time.time));
+        if (!subtractSecond)
+        {
+            StartCoroutine(Countdown());
+            clock.text = "Time Remaining: " + (timeLeft);
+        }
     }
 }

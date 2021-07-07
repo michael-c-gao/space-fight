@@ -6,8 +6,8 @@ using TMPro;
 public class PlayerStats : MonoBehaviour
 {
 
-    //public TextMeshProUGUI health;
     public float startingHealth;
+    public GameOver GameOver;
 
     public static float Health;
    
@@ -19,6 +19,9 @@ public class PlayerStats : MonoBehaviour
    
     void FixedUpdate()
     {
-        //health.text = "Health: " + Health;
+        if(Health <= 0)
+        {
+            GameOver.Setup();
+        }
     }
 }

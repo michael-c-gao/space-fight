@@ -8,6 +8,7 @@ public class ClockCountdown : MonoBehaviour
     public TextMeshProUGUI clock;
     public static int timeLeft = 100;
     public bool subtractSecond = false;
+    public GameOver GameOver;
 
     void Start()
     {
@@ -28,6 +29,10 @@ public class ClockCountdown : MonoBehaviour
         {
             StartCoroutine(Countdown());
             clock.text = "Time Remaining: " + (timeLeft);
+        }
+        if(timeLeft == 0)
+        {
+            GameOver.Setup();
         }
     }
 }

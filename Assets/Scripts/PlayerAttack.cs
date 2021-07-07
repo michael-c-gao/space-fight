@@ -23,16 +23,19 @@ public class PlayerAttack : MonoBehaviour
    
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Q)){
-            Punch();
-        }
 
-        if (Input.GetKeyDown(KeyCode.E)){
-            Kick();
-        }
+        if (!GameOver.isGameOver && !Pause.isPaused) {
+            if (Input.GetKeyDown(KeyCode.Q)) {
+                Punch();
+            }
 
-        if (Input.GetKeyDown(KeyCode.Z)){
-            Block();
+            if (Input.GetKeyDown(KeyCode.E)) {
+                Kick();
+            }
+
+            if (Input.GetKeyDown(KeyCode.Z)) {
+                Block();
+            }
         }
 
 

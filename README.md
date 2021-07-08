@@ -16,8 +16,8 @@ What to Add:
 <br/>~~player healthbar~~
 <br/>~~countdown timer~~
 <br/>~~Game Won Screen~~
+<br/>~~Player Models (Blender3D)~~ 
 <br/>special power icons/recharge bars
-<br/>Player Models (Blender3D) 
 <br/>Player Animations (blender? not sure)
 <br/>Player Punch, Kick, Block
 <br/>Player Special Abilities

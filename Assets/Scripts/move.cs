@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class move : MonoBehaviour
 {
@@ -11,7 +12,9 @@ public class move : MonoBehaviour
     public float accumulatedSprintTime = 0f;
     public Vector3 movement;
     public bool sprintable = true;
-    public bool subtractSecond = false;
+    public bool subtractSecond = false; 
+    public Image sprintbar;
+    public float sprintMax = 3;
 
     IEnumerator sprintRecharge()
     {
@@ -21,6 +24,7 @@ public class move : MonoBehaviour
 
         sprintable = true;
         subtractSecond = false;
+        sprintbar.fillAmount = 1;
     }
 
     void Update()
@@ -40,6 +44,7 @@ public class move : MonoBehaviour
 
                 movementSpeed = sprintSpeed;
                 accumulatedSprintTime += Time.deltaTime;
+                sprintbar.fillAmount = (sprintMax - accumulatedSprintTime) / 3;
                 if(accumulatedSprintTime >= 3f)
                 {
                     sprintable = false;
@@ -50,6 +55,7 @@ public class move : MonoBehaviour
             {
                 StartCoroutine(sprintRecharge());
                 accumulatedSprintTime = 0;
+                
                 
             }
             

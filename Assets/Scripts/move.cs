@@ -8,27 +8,27 @@ public class move : MonoBehaviour
     public CharacterController CC;
     public float movementSpeed;
     public float startSpeed;
-    public float sprintSpeed;
-    public float accumulatedSprintTime = 0f;
+    public float boostSpeed;
+    public float accumulatedBoostTime = 0f;
     public Vector3 movement;
-    public bool sprintable = true;
+    public bool boostable = true;
     public bool subtractSecond = false; 
-    public Image sprintbar;
-    public float sprintMax = 3;
+    public Image boostBar;
+    public float boostMax = 3;
     [SerializeField] ParticleSystem boostParticle;
     [SerializeField] ParticleSystem defaultParticle;
 
 
 
-    IEnumerator sprintRecharge()
+    IEnumerator boostRecharge()
     {
         subtractSecond = true;
   
         yield return new WaitForSeconds(2);
 
-        sprintable = true;
+        boostable = true;
         subtractSecond = false;
-        sprintbar.fillAmount = 1;
+        boostBar.fillAmount = 1;
     }
 
 
@@ -44,21 +44,21 @@ public class move : MonoBehaviour
             Vector3 moveVector = (transform.right * horizontal) + (transform.forward * vertical);
 
 
-            if (Input.GetKey(KeyCode.LeftShift) && sprintable)
+            if (Input.GetKey(KeyCode.LeftShift) && boostable)
             {
 
                 defaultParticle.Stop();
                 boostParticle.Play();
 
-                movementSpeed = sprintSpeed;
+                movementSpeed = boostSpeed;
 
-                accumulatedSprintTime += Time.deltaTime;
+                accumulatedBoostTime += Time.deltaTime;
 
-                sprintbar.fillAmount = (sprintMax - accumulatedSprintTime) / 3;
+                boostBar.fillAmount = ((boostMax - accumulatedBoostTime) / 3);
 
-                if(accumulatedSprintTime >= 3f)
+                if (accumulatedBoostTime >= 3f)
                 {
-                    sprintable = false;
+                    boostable = false;
                 }
             } 
             else {
@@ -68,10 +68,10 @@ public class move : MonoBehaviour
             }
 
             
-            if (!sprintable && !subtractSecond)
+            if (!boostable && !subtractSecond)
             {
-                StartCoroutine(sprintRecharge());
-                accumulatedSprintTime = 0;
+                StartCoroutine(boostRecharge());
+                accumulatedBoostTime = 0;
                 
                 
             }

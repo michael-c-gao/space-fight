@@ -15,7 +15,10 @@ public class move : MonoBehaviour
     public bool subtractSecond = false; 
     public Image sprintbar;
     public float sprintMax = 3;
-    [SerializeField] ParticleSystem particle;
+    [SerializeField] ParticleSystem boostParticle;
+    [SerializeField] ParticleSystem defaultParticle;
+
+
 
     IEnumerator sprintRecharge()
     {
@@ -29,12 +32,11 @@ public class move : MonoBehaviour
     }
 
 
-
     void Update()
     {
         if (!GameOver.isGameOver && !Pause.isPaused)
         {
- 
+            
             movementSpeed = startSpeed;
             float horizontal = Input.GetAxis("Horizontal");
             float vertical = Input.GetAxis("Vertical");
@@ -44,19 +46,28 @@ public class move : MonoBehaviour
 
             if (Input.GetKey(KeyCode.LeftShift) && sprintable)
             {
-                particle.Play();
+
+                defaultParticle.Stop();
+                boostParticle.Play();
+
                 movementSpeed = sprintSpeed;
+
                 accumulatedSprintTime += Time.deltaTime;
+
                 sprintbar.fillAmount = (sprintMax - accumulatedSprintTime) / 3;
+
                 if(accumulatedSprintTime >= 3f)
                 {
                     sprintable = false;
                 }
             } 
             else {
-                particle.Stop();
+
+                defaultParticle.Play();
+                boostParticle.Stop();
             }
 
+            
             if (!sprintable && !subtractSecond)
             {
                 StartCoroutine(sprintRecharge());

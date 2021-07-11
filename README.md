@@ -18,6 +18,7 @@ What to Add:
 <br/>~~Game Won Screen~~
 <br/>~~Player Models (Blender3D)~~
 <br/>~~powerup recharge bars~~
+<br/>~~thruster boosts~~
 <br/>Player Animations
 <br/>Player Punch, Kick, Block
 <br/>Special power icons / abilities

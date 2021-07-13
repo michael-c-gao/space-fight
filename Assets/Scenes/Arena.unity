@@ -34944,6 +34944,7 @@ MonoBehaviour:
   dashSpeed: 75
   dashTime: 0.2
   cooldown: 1
+  article: {fileID: 674025298}
 --- !u!20 &5876361738369797246
 Camera:
   m_ObjectHideFlags: 0
@@ -35219,6 +35220,7 @@ MonoBehaviour:
   dashSpeed: 75
   dashTime: 0.3
   cooldown: 2
+  article: {fileID: 1416647137}
 --- !u!114 &6016209640783433698
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -35541,6 +35543,7 @@ MonoBehaviour:
   dashSpeed: 75
   dashTime: 0.2
   cooldown: 1
+  article: {fileID: 593785896}
 --- !u!114 &6320354423223324674
 MonoBehaviour:
   m_ObjectHideFlags: 0

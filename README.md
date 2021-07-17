@@ -22,5 +22,6 @@ What to Add:
 <br/>~~Special power icons/abilities~~
 <br/>Player Animations
 <br/>Player Punch, Kick, Block
+<br/>game juice
 <br/>Enemy AI
 <br/>Multiplayer (look into how to do this)

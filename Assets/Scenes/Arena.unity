@@ -22512,7 +22512,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 0.15566039, b: 0.15566039, a: 1}
+  m_Color: {r: 0, g: 0.19199228, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -34944,7 +34944,7 @@ MonoBehaviour:
   dashSpeed: 75
   dashTime: 0.2
   cooldown: 1
-  article: {fileID: 674025298}
+  dashParticle: {fileID: 674025298}
 --- !u!20 &5876361738369797246
 Camera:
   m_ObjectHideFlags: 0
@@ -35220,7 +35220,7 @@ MonoBehaviour:
   dashSpeed: 75
   dashTime: 0.3
   cooldown: 2
-  article: {fileID: 1416647137}
+  dashParticle: {fileID: 1416647137}
 --- !u!114 &6016209640783433698
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -35543,7 +35543,7 @@ MonoBehaviour:
   dashSpeed: 75
   dashTime: 0.2
   cooldown: 1
-  article: {fileID: 593785896}
+  dashParticle: {fileID: 593785896}
 --- !u!114 &6320354423223324674
 MonoBehaviour:
   m_ObjectHideFlags: 0

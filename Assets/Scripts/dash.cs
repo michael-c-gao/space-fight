@@ -9,7 +9,7 @@ public class dash : MonoBehaviour
     public float dashTime;
     public float cooldown;
     private float lastDashed = -9999f;
-    [SerializeField] ParticleSystem article;
+    [SerializeField] ParticleSystem dashParticle;
 
 
     void Start()
@@ -40,7 +40,7 @@ public class dash : MonoBehaviour
             while (Time.time < starT + dashTime)
             {
                 movementScript.CC.Move(movementScript.movement * dashSpeed * Time.deltaTime);
-                article.Emit(10);
+                dashParticle.Emit(1);
 
 
                 yield return null;

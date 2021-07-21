@@ -6,26 +6,33 @@ using UnityEngine.UI;
 public class move : MonoBehaviour
 {
     public CharacterController CC;
+
     public float movementSpeed;
     public float startSpeed;
     public float boostSpeed;
+    public float boostMax = 3;
     public float accumulatedBoostTime = 0f;
-    public Vector3 movement;
+
     public bool boostable = true;
     public bool subtractSecond = false;
-    public bool frenzyactive = false;
+    public bool powerActive = false;
+
     public Image boostBar;
-    public float boostMax = 3;
+
+    public Vector3 movement;
+
     [SerializeField] ParticleSystem boostParticle;
     [SerializeField] ParticleSystem defaultParticle;
 
-    IEnumerator frenzee()
+
+    IEnumerator SpecialPower()
     {
-        frenzyactive = true;
+        powerActive = true;
         movementSpeed = 100;
         yield return new WaitForSeconds(5);
-        frenzyactive = false;
+        powerActive = false;
     }
+
 
     IEnumerator boostRecharge()
     {
@@ -85,7 +92,7 @@ public class move : MonoBehaviour
 
             if (PlayerAttack.abilityActivated)
             {
-                StartCoroutine(frenzee());
+                StartCoroutine(SpecialPower());
             }
             
             movement = moveVector;

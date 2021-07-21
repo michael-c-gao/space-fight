@@ -5,12 +5,16 @@ using UnityEngine.UI;
 
 public class PlayerAttack : MonoBehaviour
 {
-    public float count;
-    public static float maxCount = 50;
+
+    public bool activePower = false;
     public static bool triggerable = true;
     public static bool abilityActivated = false;
-    public bool ouch = false;
+
+    public float count;
+    public static float maxCount = 50;
+
     public Image abilityBar;
+
     [SerializeField] ParticleSystem attackParticle;
 
 
@@ -52,22 +56,19 @@ public class PlayerAttack : MonoBehaviour
         print("special power activated");
         abilityActivated = true;
         count = 0;
-        StartCoroutine(pop());
+        StartCoroutine(powerDuration());
         triggerable = true;
 
     }
 
 
-    IEnumerator pop()
+    IEnumerator powerDuration()
     {
-        ouch = true;
-        
+        activePower = true;
         yield return new WaitForSeconds(5);
         abilityActivated = false;
-        ouch = false;
+        activePower = false;
     }
-
-
 
 
     void Update()

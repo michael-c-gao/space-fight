@@ -8,13 +8,16 @@ public class PlayerAttack : MonoBehaviour
     public float count;
     public static float maxCount = 50;
     public static bool triggerable = true;
+    public static bool abilityActivated = false;
     public Image abilityBar;
+    [SerializeField] ParticleSystem attackParticle;
 
 
 
     void Punch()
     {
         print("Punch");
+        attackParticle.Play();
         if (triggerable)
         {
             count += 1;
@@ -25,6 +28,7 @@ public class PlayerAttack : MonoBehaviour
     void Kick()
     {
         print("Kick");
+        attackParticle.Play();
         if (triggerable)
         {
             count += 2;
@@ -45,6 +49,7 @@ public class PlayerAttack : MonoBehaviour
     void specialPower()
     {
         print("special power activated");
+        abilityActivated = true;
         count = 0;
         triggerable = true;
 

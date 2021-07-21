@@ -13759,12 +13759,13 @@ MonoBehaviour:
   movementSpeed: 25
   startSpeed: 25
   boostSpeed: 40
+  boostMax: 3
   accumulatedBoostTime: 0
-  movement: {x: 0, y: 0, z: 0}
   boostable: 1
   subtractSecond: 0
+  powerActive: 0
   boostBar: {fileID: 1445608995}
-  boostMax: 3
+  movement: {x: 0, y: 0, z: 0}
   boostParticle: {fileID: 1309700547}
   defaultParticle: {fileID: 1403512241}
 --- !u!114 &851807389
@@ -26996,7 +26997,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d8470399e69435d4e933f354b79d1124, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  activePower: 0
   count: 0
+  startingDamage: 15
+  playerDamage: 0
+  powerupDamage: 75
   abilityBar: {fileID: 296167120}
   attackParticle: {fileID: 591338791}
 --- !u!1 &1875015104

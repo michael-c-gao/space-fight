@@ -11,6 +11,9 @@ public class PlayerAttack : MonoBehaviour
     public static bool abilityActivated = false;
 
     public float count;
+    public float startingDamage;
+    public float playerDamage;
+    public float powerupDamage;
     public static float maxCount = 50;
 
     public Image abilityBar;
@@ -21,7 +24,7 @@ public class PlayerAttack : MonoBehaviour
 
     void Punch()
     {
-        print("Punch");
+        //print("Punch");
         attackParticle.Play();
         if (triggerable)
         {
@@ -32,18 +35,18 @@ public class PlayerAttack : MonoBehaviour
 
     void Kick()
     {
-        print("Kick");
+        //print("Kick");
         attackParticle.Play();
         if (triggerable)
         {
-            count += 50;
+            count += 2;
         }
     }
 
 
     void Block()
     {
-        print("Block");
+        //print("Block");
         if (triggerable)
         {
             count += 0.5f;
@@ -53,7 +56,7 @@ public class PlayerAttack : MonoBehaviour
 
     void specialPower()
     {
-        print("special power activated");
+        //print("special power activated");
         abilityActivated = true;
         count = 0;
         StartCoroutine(powerDuration());
@@ -65,6 +68,7 @@ public class PlayerAttack : MonoBehaviour
     IEnumerator powerDuration()
     {
         activePower = true;
+        playerDamage = powerupDamage;
         yield return new WaitForSeconds(5);
         abilityActivated = false;
         activePower = false;
@@ -75,6 +79,10 @@ public class PlayerAttack : MonoBehaviour
     {
 
         if (!GameOver.isGameOver && !Pause.isPaused) {
+            if (!activePower)
+            {
+                playerDamage = startingDamage;
+            }
             if (Input.GetKeyDown(KeyCode.Q)) {
                 Punch();
             }
@@ -100,7 +108,7 @@ public class PlayerAttack : MonoBehaviour
         }
 
         abilityBar.fillAmount = (count / maxCount);
-        print(count);
+        print(playerDamage);
 
     }
 }

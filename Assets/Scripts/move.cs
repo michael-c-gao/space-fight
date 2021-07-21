@@ -12,13 +12,20 @@ public class move : MonoBehaviour
     public float accumulatedBoostTime = 0f;
     public Vector3 movement;
     public bool boostable = true;
-    public bool subtractSecond = false; 
+    public bool subtractSecond = false;
+    public bool frenzyactive = false;
     public Image boostBar;
     public float boostMax = 3;
     [SerializeField] ParticleSystem boostParticle;
     [SerializeField] ParticleSystem defaultParticle;
 
-
+    IEnumerator frenzee()
+    {
+        frenzyactive = true;
+        movementSpeed = 100;
+        yield return new WaitForSeconds(5);
+        frenzyactive = false;
+    }
 
     IEnumerator boostRecharge()
     {
@@ -74,6 +81,11 @@ public class move : MonoBehaviour
                 accumulatedBoostTime = 0;
                 
                 
+            }
+
+            if (PlayerAttack.abilityActivated)
+            {
+                StartCoroutine(frenzee());
             }
             
             movement = moveVector;

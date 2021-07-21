@@ -9,6 +9,7 @@ public class PlayerAttack : MonoBehaviour
     public static float maxCount = 50;
     public static bool triggerable = true;
     public static bool abilityActivated = false;
+    public bool ouch = false;
     public Image abilityBar;
     [SerializeField] ParticleSystem attackParticle;
 
@@ -31,7 +32,7 @@ public class PlayerAttack : MonoBehaviour
         attackParticle.Play();
         if (triggerable)
         {
-            count += 2;
+            count += 50;
         }
     }
 
@@ -51,9 +52,22 @@ public class PlayerAttack : MonoBehaviour
         print("special power activated");
         abilityActivated = true;
         count = 0;
+        StartCoroutine(pop());
         triggerable = true;
 
     }
+
+
+    IEnumerator pop()
+    {
+        ouch = true;
+        
+        yield return new WaitForSeconds(5);
+        abilityActivated = false;
+        ouch = false;
+    }
+
+
 
 
     void Update()

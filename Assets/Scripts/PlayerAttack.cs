@@ -24,7 +24,6 @@ public class PlayerAttack : MonoBehaviour
 
     void Punch()
     {
-        //print("Punch");
         attackParticle.Play();
         if (triggerable)
         {
@@ -35,7 +34,6 @@ public class PlayerAttack : MonoBehaviour
 
     void Kick()
     {
-        //print("Kick");
         attackParticle.Play();
         if (triggerable)
         {
@@ -46,7 +44,6 @@ public class PlayerAttack : MonoBehaviour
 
     void Block()
     {
-        //print("Block");
         if (triggerable)
         {
             count += 0.5f;
@@ -56,7 +53,6 @@ public class PlayerAttack : MonoBehaviour
 
     void specialPower()
     {
-        //print("special power activated");
         abilityActivated = true;
         count = 0;
         StartCoroutine(powerDuration());
@@ -108,7 +104,6 @@ public class PlayerAttack : MonoBehaviour
         }
 
         abilityBar.fillAmount = (count / maxCount);
-        print(playerDamage);
 
     }
 }

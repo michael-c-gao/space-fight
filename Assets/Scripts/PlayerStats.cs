@@ -7,19 +7,30 @@ public class PlayerStats : MonoBehaviour
 {
 
     public float startingHealth;
+    public float maxHealth;
+    public static float healthmax;
     public GameOver GameOver;
 
     public static float Health;
    
     void Start()
     {
+        healthmax = maxHealth;
         Health = startingHealth;
     }
 
    
     void FixedUpdate()
     {
-        if(Health <= 0)
+        
+        if(Health > maxHealth)
+        {
+            Health = maxHealth;
+        }
+
+        print(Health);
+
+        if (Health <= 0)
         {
             GameOver.Setup();
         }

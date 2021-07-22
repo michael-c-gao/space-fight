@@ -6,8 +6,7 @@ using UnityEngine.UI;
 public class healthbar : MonoBehaviour
 {
     private Image barhealth;
-    public float currenthealth; 
-        public float maxhealth;
+    //public float maxhealth;
 
 
     void Start()
@@ -18,8 +17,8 @@ public class healthbar : MonoBehaviour
 
      void Update()
     {
-        currenthealth = PlayerStats.Health;
         
-        barhealth.fillAmount = currenthealth / maxhealth;
+        barhealth.fillAmount = PlayerStats.Health / PlayerStats.healthmax;
+        
     }
 }

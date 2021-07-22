@@ -25,10 +25,22 @@ public class move : MonoBehaviour
     [SerializeField] ParticleSystem defaultParticle;
 
 
+    void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.CompareTag("Pickup"))
+        {
+            PlayerStats.Health += 20;
+            other.gameObject.SetActive(false);
+        }
+
+    }
+
+
+
     IEnumerator SpecialPower()
     {
         powerActive = true;
-        movementSpeed = 100;
+        movementSpeed = boostSpeed + 15;
         yield return new WaitForSeconds(5);
         powerActive = false;
     }

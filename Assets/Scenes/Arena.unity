@@ -5206,6 +5206,7 @@ GameObject:
   - component: {fileID: 77596335}
   - component: {fileID: 77596334}
   - component: {fileID: 77596333}
+  - component: {fileID: 77596337}
   m_Layer: 0
   m_Name: DmgPickup
   m_TagString: DmgPickup
@@ -5289,6 +5290,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &77596337
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 77596332}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 108f1732609c8d2408458ea5d62fa95f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &80238274
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -11203,6 +11216,7 @@ GameObject:
   - component: {fileID: 560608449}
   - component: {fileID: 560608448}
   - component: {fileID: 560608447}
+  - component: {fileID: 560608451}
   m_Layer: 0
   m_Name: SpeedPickup
   m_TagString: SpeedPickup
@@ -11286,6 +11300,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &560608451
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 560608446}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 108f1732609c8d2408458ea5d62fa95f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &593785893
 GameObject:
   m_ObjectHideFlags: 0
@@ -32184,6 +32210,7 @@ GameObject:
   - component: {fileID: 1108692762}
   - component: {fileID: 1108692761}
   - component: {fileID: 1108692760}
+  - component: {fileID: 1108692764}
   m_Layer: 0
   m_Name: HealthPickup
   m_TagString: HealthPickup
@@ -32267,6 +32294,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1108692764
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1108692759}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 108f1732609c8d2408458ea5d62fa95f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1163637331
 PrefabInstance:
   m_ObjectHideFlags: 0

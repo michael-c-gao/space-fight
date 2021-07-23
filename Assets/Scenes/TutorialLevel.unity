@@ -1098,6 +1098,7 @@ GameObject:
   - component: {fileID: 230721009}
   - component: {fileID: 230721008}
   - component: {fileID: 230721007}
+  - component: {fileID: 230721011}
   m_Layer: 0
   m_Name: HealthPickup
   m_TagString: HealthPickup
@@ -1181,6 +1182,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &230721011
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 230721006}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 108f1732609c8d2408458ea5d62fa95f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &268209645
 GameObject:
   m_ObjectHideFlags: 0
@@ -13839,7 +13852,7 @@ MonoBehaviour:
   boostSpeed: 40
   boostMax: 3
   accumulatedBoostTime: 0
-  actualSpeed: 0
+  powerupSpeed: 0
   boostable: 1
   subtractSecond: 0
   powerActive: 0
@@ -20574,6 +20587,7 @@ GameObject:
   - component: {fileID: 1347344758}
   - component: {fileID: 1347344757}
   - component: {fileID: 1347344756}
+  - component: {fileID: 1347344760}
   m_Layer: 0
   m_Name: SpeedPickup
   m_TagString: SpeedPickup
@@ -20657,6 +20671,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1347344760
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1347344755}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 108f1732609c8d2408458ea5d62fa95f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1370878912
 GameObject:
   m_ObjectHideFlags: 0
@@ -26641,6 +26667,7 @@ GameObject:
   - component: {fileID: 1750488960}
   - component: {fileID: 1750488959}
   - component: {fileID: 1750488958}
+  - component: {fileID: 1750488962}
   m_Layer: 0
   m_Name: DmgPickup
   m_TagString: DmgPickup
@@ -26724,6 +26751,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1750488962
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1750488957}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 108f1732609c8d2408458ea5d62fa95f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1762217169
 GameObject:
   m_ObjectHideFlags: 0

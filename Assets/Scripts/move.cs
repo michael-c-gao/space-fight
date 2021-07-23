@@ -12,7 +12,7 @@ public class move : MonoBehaviour
     public float boostSpeed;
     public float boostMax = 3;
     public float accumulatedBoostTime = 0f;
-
+    public float powerupSpeed = 0;
     public bool boostable = true;
     public bool subtractSecond = false;
     public bool powerActive = false;
@@ -25,16 +25,33 @@ public class move : MonoBehaviour
     [SerializeField] ParticleSystem defaultParticle;
 
 
+    public void Start()
+    {
+        movementSpeed = startSpeed;
+    }
+
+
     void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.CompareTag("Pickup"))
+        if (other.gameObject.CompareTag("HealthPickup"))
         {
             PlayerStats.Health += 20;
             other.gameObject.SetActive(false);
         }
 
-    }
+        if (other.gameObject.CompareTag("SpeedPickup"))
+        {
+            powerupSpeed += 20;
+            other.gameObject.SetActive(false);
+        }
 
+        if (other.gameObject.CompareTag("DmgPickup"))
+        {
+            PlayerAttack.attackpickup += 5;
+            other.gameObject.SetActive(false);
+        }
+
+    }
 
 
     IEnumerator SpecialPower()
@@ -63,7 +80,7 @@ public class move : MonoBehaviour
         if (!GameOver.isGameOver && !Pause.isPaused)
         {
             
-            movementSpeed = startSpeed;
+            
             float horizontal = Input.GetAxis("Horizontal");
             float vertical = Input.GetAxis("Vertical");
 
@@ -91,6 +108,7 @@ public class move : MonoBehaviour
 
                 defaultParticle.Play();
                 boostParticle.Stop();
+                movementSpeed = startSpeed + powerupSpeed;
             }
 
             

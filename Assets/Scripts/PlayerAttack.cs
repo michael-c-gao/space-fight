@@ -14,6 +14,7 @@ public class PlayerAttack : MonoBehaviour
     public float startingDamage;
     public float playerDamage;
     public float powerupDamage;
+    public static float attackpickup = 0;
     public static float maxCount = 50;
 
     public Image abilityBar;
@@ -77,7 +78,7 @@ public class PlayerAttack : MonoBehaviour
         if (!GameOver.isGameOver && !Pause.isPaused) {
             if (!activePower)
             {
-                playerDamage = startingDamage;
+                playerDamage = startingDamage + attackpickup;
             }
             if (Input.GetKeyDown(KeyCode.Q)) {
                 Punch();

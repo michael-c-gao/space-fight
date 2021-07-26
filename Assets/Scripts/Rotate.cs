@@ -7,6 +7,6 @@ public class Rotate : MonoBehaviour
 
     void FixedUpdate()
     {
-        transform.Rotate(0, -75 * Time.deltaTime,0);
+        transform.Rotate(0,0 , -75 * Time.deltaTime);
     }
 }

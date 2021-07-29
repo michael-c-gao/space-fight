@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class test : MonoBehaviour
 {
-    public float rotationSensitivity;
+    private float rotationSensitivity;
     public Transform playerRotate;
     float XRotation = 0f;
     public static bool isPaused = false;
@@ -12,6 +12,7 @@ public class test : MonoBehaviour
 
     void Start()
     {
+        rotationSensitivity = 125;
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
     }
@@ -19,6 +20,7 @@ public class test : MonoBehaviour
 
     void Update()
     {
+        rotationSensitivity = SensSlider.sliderValue;
         float Xaxis = Input.GetAxis("Mouse X") * rotationSensitivity * Time.deltaTime;
         float Yaxis = Input.GetAxis("Mouse Y") * rotationSensitivity * Time.deltaTime;
 

@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class test : MonoBehaviour
 {
-    public float rotationSensitivity = 100f;
+    public float rotationSensitivity;
     public Transform playerRotate;
     float XRotation = 0f;
     public static bool isPaused = false;

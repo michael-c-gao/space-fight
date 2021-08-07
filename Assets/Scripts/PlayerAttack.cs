@@ -23,7 +23,7 @@ public class PlayerAttack : MonoBehaviour
 
 
 
-    void Punch()
+    void LightAttack()
     {
         attackParticle.Play();
         if (triggerable)
@@ -33,7 +33,7 @@ public class PlayerAttack : MonoBehaviour
     }
 
 
-    void Kick()
+    void HeavyAttack()
     {
         attackParticle.Play();
         if (triggerable)
@@ -80,12 +80,12 @@ public class PlayerAttack : MonoBehaviour
             {
                 playerDamage = startingDamage + attackpickup;
             }
-            if (Input.GetKeyDown(KeyCode.Q)) {
-                Punch();
+            if (Input.GetMouseButtonDown(0)) {
+                LightAttack();
             }
 
-            if (Input.GetKeyDown(KeyCode.E)) {
-                Kick();
+            if (Input.GetMouseButtonDown(1)) {
+                HeavyAttack();
             }
 
             if (Input.GetKeyDown(KeyCode.Z)) {

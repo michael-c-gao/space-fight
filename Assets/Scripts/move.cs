@@ -83,8 +83,9 @@ public class move : MonoBehaviour
             
             float horizontal = Input.GetAxis("Horizontal");
             float vertical = Input.GetAxis("Vertical");
+            float threedmovement = Input.GetAxis("threedmovement");
 
-            Vector3 moveVector = (transform.right * horizontal) + (transform.forward * vertical);
+            Vector3 moveVector = (transform.right * horizontal) + (transform.forward * vertical) + (transform.up * threedmovement);
 
 
             if (Input.GetKey(KeyCode.LeftShift) && boostable)

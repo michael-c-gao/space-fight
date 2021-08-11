@@ -28,7 +28,7 @@ public class PlayerStats : MonoBehaviour
             Health = maxHealth;
         }
 
-        print(Health);
+        
 
         if (Health <= 0)
         {

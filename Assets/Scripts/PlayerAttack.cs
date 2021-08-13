@@ -75,6 +75,8 @@ public class PlayerAttack : MonoBehaviour
     void Update()
     {
 
+        /*
+
         if (!GameOver.isGameOver && !Pause.isPaused) {
             if (!activePower)
             {
@@ -105,6 +107,6 @@ public class PlayerAttack : MonoBehaviour
         }
 
         abilityBar.fillAmount = (count / maxCount);
-
+        */
     }
 }

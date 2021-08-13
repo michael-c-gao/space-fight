@@ -79,8 +79,8 @@ public class move : MonoBehaviour
     {
         if (!GameOver.isGameOver && !Pause.isPaused)
         {
-            
-            
+
+
             float horizontal = Input.GetAxis("Horizontal");
             float vertical = Input.GetAxis("Vertical");
             float threedmovement = Input.GetAxis("threedmovement");
@@ -104,28 +104,29 @@ public class move : MonoBehaviour
                 {
                     boostable = false;
                 }
-            } 
-            else {
+            }
+            else
+            {
 
                 defaultParticle.Play();
                 boostParticle.Stop();
                 movementSpeed = startSpeed + powerupSpeed;
             }
 
-            
+
             if (!boostable && !subtractSecond)
             {
                 StartCoroutine(boostRecharge());
                 accumulatedBoostTime = 0;
-                
-                
+
+
             }
 
             if (PlayerAttack.abilityActivated)
             {
                 StartCoroutine(SpecialPower());
             }
-            
+
             movement = moveVector;
             CC.Move(moveVector * movementSpeed * Time.deltaTime);
         }

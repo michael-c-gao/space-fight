@@ -332,6 +332,81 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 26787838}
   m_CullTransparentMesh: 1
+--- !u!1 &44707125
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 44707126}
+  - component: {fileID: 44707128}
+  - component: {fileID: 44707127}
+  m_Layer: 5
+  m_Name: EnemyHealthBackground
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &44707126
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 44707125}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1510783950}
+  m_RootOrder: 14
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 574, y: 482}
+  m_SizeDelta: {x: 650, y: 110}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &44707127
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 44707125}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 0}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &44707128
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 44707125}
+  m_CullTransparentMesh: 1
 --- !u!1 &65644224
 GameObject:
   m_ObjectHideFlags: 0
@@ -10086,9 +10161,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Damage: 10
   fireRate: 15
+  count: 0
   cam: {fileID: 5876361738369797246}
   attackParticle: {fileID: 1982235634}
   impact: {fileID: 1581548236}
+  abilityBar: {fileID: 1272112133}
 --- !u!4 &111361083 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 658be713590a49c469d1eff5b1b5a502, type: 3}
@@ -10191,9 +10268,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Damage: 10
   fireRate: 15
+  count: 0
   cam: {fileID: 6320354423223324667}
   attackParticle: {fileID: 595155489}
   impact: {fileID: 1581548236}
+  abilityBar: {fileID: 1272112133}
 --- !u!1 &143635069
 GameObject:
   m_ObjectHideFlags: 0
@@ -10805,9 +10884,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Damage: 10
   fireRate: 15
+  count: 0
   cam: {fileID: 5876361738369797246}
   attackParticle: {fileID: 1982235634}
   impact: {fileID: 1581548236}
+  abilityBar: {fileID: 1272112133}
 --- !u!1 &319280536
 GameObject:
   m_ObjectHideFlags: 0
@@ -16851,7 +16932,7 @@ GameObject:
   - component: {fileID: 528208102}
   - component: {fileID: 528208101}
   m_Layer: 5
-  m_Name: Image
+  m_Name: Crosshair
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -26854,9 +26935,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Damage: 10
   fireRate: 15
+  count: 0
   cam: {fileID: 6016209640783433691}
   attackParticle: {fileID: 65644227}
   impact: {fileID: 1581548236}
+  abilityBar: {fileID: 1272112133}
 --- !u!1 &664772497
 GameObject:
   m_ObjectHideFlags: 0
@@ -37346,6 +37429,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemyHealth: 100
   GameOver: {fileID: 443238710}
+  enemyMaxHealth: 100
+  enemybarhealth: {fileID: 1773318500}
 --- !u!1 &874921355
 GameObject:
   m_ObjectHideFlags: 0
@@ -38348,9 +38433,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Damage: 10
   fireRate: 15
+  count: 0
   cam: {fileID: 5876361738369797246}
   attackParticle: {fileID: 1982235634}
   impact: {fileID: 1581548236}
+  abilityBar: {fileID: 1272112133}
 --- !u!4 &1083803024 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: c4392c41d355f7c4496b1c4a6b871f7f, type: 3}
@@ -39646,9 +39733,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Damage: 10
   fireRate: 15
+  count: 0
   cam: {fileID: 6016209640783433691}
   attackParticle: {fileID: 65644227}
   impact: {fileID: 1581548236}
+  abilityBar: {fileID: 1272112133}
 --- !u!1 &1272112130
 GameObject:
   m_ObjectHideFlags: 0
@@ -39660,7 +39749,6 @@ GameObject:
   - component: {fileID: 1272112131}
   - component: {fileID: 1272112134}
   - component: {fileID: 1272112133}
-  - component: {fileID: 1272112132}
   m_Layer: 5
   m_Name: powerUpBar
   m_TagString: Untagged
@@ -39687,18 +39775,6 @@ RectTransform:
   m_AnchoredPosition: {x: -492, y: -500}
   m_SizeDelta: {x: 400, y: 94}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1272112132
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1272112130}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 72563da3c0e2f524290a22064df96820, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &1272112133
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -45142,9 +45218,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Damage: 10
   fireRate: 15
+  count: 0
   cam: {fileID: 6320354423223324667}
   attackParticle: {fileID: 595155489}
   impact: {fileID: 1581548236}
+  abilityBar: {fileID: 1272112133}
 --- !u!1 &1496566900
 GameObject:
   m_ObjectHideFlags: 0
@@ -45785,6 +45863,8 @@ RectTransform:
   - {fileID: 929928715}
   - {fileID: 1516685813}
   - {fileID: 528208100}
+  - {fileID: 44707126}
+  - {fileID: 1773318499}
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -45974,9 +46054,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Damage: 10
   fireRate: 15
+  count: 0
   cam: {fileID: 6016209640783433691}
   attackParticle: {fileID: 65644227}
   impact: {fileID: 1581548236}
+  abilityBar: {fileID: 1272112133}
 --- !u!1 &1553485966
 GameObject:
   m_ObjectHideFlags: 0
@@ -47172,6 +47254,81 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: -62}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!1 &1773318498
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1773318499}
+  - component: {fileID: 1773318501}
+  - component: {fileID: 1773318500}
+  m_Layer: 5
+  m_Name: EnemyHealthBar
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1773318499
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1773318498}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1510783950}
+  m_RootOrder: 15
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 579, y: 479}
+  m_SizeDelta: {x: 632, y: 94}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1773318500
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1773318498}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 0.15566039, b: 0.15566039, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 21300000, guid: 05ea4f9a193341c4a9f8ec5d2eb9a949, type: 3}
+  m_Type: 3
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 0
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &1773318501
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1773318498}
+  m_CullTransparentMesh: 1
 --- !u!1 &1789259556
 GameObject:
   m_ObjectHideFlags: 0
@@ -53008,9 +53165,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Damage: 10
   fireRate: 15
+  count: 0
   cam: {fileID: 6320354423223324667}
   attackParticle: {fileID: 595155489}
   impact: {fileID: 1581548236}
+  abilityBar: {fileID: 1272112133}
 --- !u!1 &2049564489
 GameObject:
   m_ObjectHideFlags: 0

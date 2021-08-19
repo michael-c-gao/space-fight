@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Shoot : MonoBehaviour
 {
@@ -6,10 +7,13 @@ public class Shoot : MonoBehaviour
     public float Damage = 10f;
     public float fireRate = 15f;
     private float nextShot = 0f;
+    public float count;
     public Camera cam;
     [SerializeField] ParticleSystem attackParticle;
     public GameObject impact;
-    
+    public Image abilityBar;
+    public static float maxCount = 50;
+
 
     void shootGun()
     {
@@ -19,6 +23,7 @@ public class Shoot : MonoBehaviour
             if (enemy != null)
             {
                 enemy.BulletHit(Damage);
+                count += 1;
             }
 
             GameObject impactMark = Instantiate(impact, hit.point, Quaternion.LookRotation(hit.normal));
@@ -29,6 +34,8 @@ public class Shoot : MonoBehaviour
 
     void Update()
     {
+
+
         if (Input.GetMouseButtonDown(0) && Time.time >= nextShot)
         {
             nextShot = Time.time +  4/fireRate;
@@ -37,5 +44,6 @@ public class Shoot : MonoBehaviour
            
 
         }
+        abilityBar.fillAmount = (count / maxCount);
     }
 }

@@ -21,7 +21,7 @@ public class dash : MonoBehaviour
     void Update()
     {
 
-        if (Input.GetKeyDown(KeyCode.Space))
+        if (Input.GetKeyDown(KeyCode.Space) && !GameOver.isGameOver)
         {
             if (Time.time > lastDashed + cooldown)
             {

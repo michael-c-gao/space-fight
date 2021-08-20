@@ -32,15 +32,42 @@ public class Gun : MonoBehaviour
 
     }
 
+    void weaponSwap(int swap)
+    {
+        if (swap != currWeapon)
+        {
+            weapons[currWeapon].SetActive(false);
+            currWeapon = swap;
+            weapons[currWeapon].SetActive(true);
+        }
+    }
+
     void Update()
     {
-        if (Input.GetAxis("Mouse ScrollWheel") > 0f)
+        if (!Pause.isPaused && !GameOver.isGameOver)
         {
-            setWeapon(maxIndex, 1, 0);  
-        }
-        else if (Input.GetAxis("Mouse ScrollWheel") < 0f)
-        {
-            setWeapon(minIndex, -1, maxIndex); 
+            if (Input.GetAxis("Mouse ScrollWheel") > 0f)
+            {
+                setWeapon(maxIndex, 1, 0);
+            }
+            else if (Input.GetAxis("Mouse ScrollWheel") < 0f)
+            {
+                setWeapon(minIndex, -1, maxIndex);
+            }
+
+
+            if (Input.GetKey(KeyCode.Alpha1)) {
+                weaponSwap(0);
+            }
+            if (Input.GetKey(KeyCode.Alpha2))
+            {
+                weaponSwap(1);
+            }
+             if (Input.GetKey(KeyCode.Alpha3))
+            {
+                weaponSwap(2);
+            }
+
         }
      }
 }

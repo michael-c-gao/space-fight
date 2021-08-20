@@ -20,13 +20,16 @@ public class test : MonoBehaviour
 
     void Update()
     {
-        rotationSensitivity = SensSlider.sliderValue;
-        float Xaxis = Input.GetAxis("Mouse X") * rotationSensitivity * Time.deltaTime;
-        float Yaxis = Input.GetAxis("Mouse Y") * rotationSensitivity * Time.deltaTime;
+        if (!GameOver.isGameOver)
+        {
+            rotationSensitivity = SensSlider.sliderValue;
+            float Xaxis = Input.GetAxis("Mouse X") * rotationSensitivity * Time.deltaTime;
+            float Yaxis = Input.GetAxis("Mouse Y") * rotationSensitivity * Time.deltaTime;
 
-        XRotation -= Yaxis;
+            XRotation -= Yaxis;
 
-        transform.localRotation = Quaternion.Euler(XRotation, 0f, 0f);
-        playerRotate.Rotate(Vector3.up * Xaxis);
+            transform.localRotation = Quaternion.Euler(XRotation, 0f, 0f);
+            playerRotate.Rotate(Vector3.up * Xaxis);
+        }
     }
 }

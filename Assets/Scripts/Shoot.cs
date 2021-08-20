@@ -36,7 +36,7 @@ public class Shoot : MonoBehaviour
     {
 
 
-        if (Input.GetMouseButtonDown(0) && Time.time >= nextShot)
+        if (Input.GetMouseButtonDown(0) && (Time.time >= nextShot) && !GameOver.isGameOver)
         {
             nextShot = Time.time +  4/fireRate;
             attackParticle.Play();

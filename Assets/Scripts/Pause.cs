@@ -64,7 +64,7 @@ public class Pause : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Alpha1) && !inControls && !GameOver.isGameOver)
+        if (Input.GetKeyDown(KeyCode.Escape) && !inControls && !GameOver.isGameOver)
         {
             if (isPaused)
             {

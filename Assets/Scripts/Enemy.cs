@@ -15,7 +15,7 @@ public class Enemy : MonoBehaviour
     public void BulletHit(float amount)
     {
         enemyHealth -= amount;
-        print(enemyHealth);
+            
         if(enemyHealth <= 0)
         {
             GameOver.Setup();

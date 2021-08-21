@@ -7,11 +7,9 @@ public class Arrow : MonoBehaviour
 {
 
     public Transform target;
-    public TextMeshProUGUI distance;
-
     public Transform Player;
     public Transform realArrow;
-
+    public TextMeshProUGUI distance;
 
     void Update()
     {

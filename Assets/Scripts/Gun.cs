@@ -5,9 +5,10 @@ using UnityEngine;
 public class Gun : MonoBehaviour
 {
     public GameObject[] weapons;
-    private int currWeapon;
+    
     public int minIndex = 0;
     public int maxIndex;
+    public static int currWeapon;
 
 
     void Start()
@@ -29,7 +30,6 @@ public class Gun : MonoBehaviour
             currWeapon = setIndex;
         }
         weapons[currWeapon].SetActive(true);
-
     }
 
     void weaponSwap(int swap)
@@ -44,6 +44,7 @@ public class Gun : MonoBehaviour
 
     void Update()
     {
+
         if (!Pause.isPaused && !GameOver.isGameOver)
         {
             if (Input.GetAxis("Mouse ScrollWheel") > 0f)
@@ -59,15 +60,14 @@ public class Gun : MonoBehaviour
             if (Input.GetKey(KeyCode.Alpha1)) {
                 weaponSwap(0);
             }
-            if (Input.GetKey(KeyCode.Alpha2))
+            else if (Input.GetKey(KeyCode.Alpha2))
             {
                 weaponSwap(1);
             }
-             if (Input.GetKey(KeyCode.Alpha3))
+             else if (Input.GetKey(KeyCode.Alpha3))
             {
                 weaponSwap(2);
             }
-
         }
      }
 }

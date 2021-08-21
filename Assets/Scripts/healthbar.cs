@@ -5,20 +5,22 @@ using UnityEngine.UI;
 
 public class healthbar : MonoBehaviour
 {
-    private Image barhealth;
-    //public float maxhealth;
-
+    public Image barhealth;
+    public float playerCurrHealth;
 
     void Start()
     {
-        barhealth = GetComponent<Image>();
-
+        playerCurrHealth = PlayerStats.healthmax;
     }
 
-     void Update()
+
+    void Update()
     {
-        
-        barhealth.fillAmount = PlayerStats.Health / PlayerStats.healthmax;
+        if (PlayerStats.Health != playerCurrHealth)
+        {
+            playerCurrHealth = PlayerStats.Health;
+            barhealth.fillAmount = playerCurrHealth / PlayerStats.healthmax;
+        }
         
     }
 }

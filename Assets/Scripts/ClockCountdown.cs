@@ -5,10 +5,10 @@ using TMPro;
 
 public class ClockCountdown : MonoBehaviour
 {
-    public TextMeshProUGUI clock;
-    public static int timeLeft = 100;
-    public bool subtractSecond = false;
     public GameOver GameOver;
+    public TextMeshProUGUI clock;
+    public bool subtractSecond = false;
+    public static int timeLeft = 100;
 
     void Start()
     {

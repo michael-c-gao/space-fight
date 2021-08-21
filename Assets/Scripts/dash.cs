@@ -17,6 +17,19 @@ public class dash : MonoBehaviour
         movementScript = GetComponent<move>();
     }
 
+    IEnumerator Dash()
+    {
+        float starT = Time.time;
+
+        while (Time.time < starT + dashTime)
+        {
+            movementScript.CC.Move(movementScript.movement * dashSpeed * Time.deltaTime);
+            dashParticle.Emit(1);
+
+
+            yield return null;
+        }
+    }
 
     void Update()
     {
@@ -30,21 +43,6 @@ public class dash : MonoBehaviour
             }
 
 
-        }
-
-
-        IEnumerator Dash()
-        {
-            float starT = Time.time;
-
-            while (Time.time < starT + dashTime)
-            {
-                movementScript.CC.Move(movementScript.movement * dashSpeed * Time.deltaTime);
-                dashParticle.Emit(1);
-
-
-                yield return null;
-            }
         }
     }
 }

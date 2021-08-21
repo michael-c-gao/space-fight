@@ -5,18 +5,22 @@ using UnityEngine.UI;
 
 public class Enemy : MonoBehaviour
 {
+    public float enemyCurrHealth;
     public float enemyHealth = 100f;
-    public GameOver GameOver;
     public float enemyMaxHealth = 100f;
+    public GameOver GameOver;
     public Image enemybarhealth;
 
-
+    void Start()
+    {
+        enemyCurrHealth = enemyMaxHealth;
+    }
 
     public void BulletHit(float amount)
     {
         enemyHealth -= amount;
-            
-        if(enemyHealth <= 0)
+
+        if (enemyHealth <= 0)
         {
             GameOver.Setup();
         }
@@ -24,9 +28,10 @@ public class Enemy : MonoBehaviour
 
     void Update()
     {
-
-       enemybarhealth.fillAmount = enemyHealth / enemyMaxHealth;
-//
-   }
-
+        if (enemyCurrHealth != enemyHealth)
+        {
+            enemybarhealth.fillAmount = enemyHealth / enemyMaxHealth;
+            enemyCurrHealth = enemyHealth;
+        }
+    }
 }

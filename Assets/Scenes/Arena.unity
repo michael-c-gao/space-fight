@@ -10173,13 +10173,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f1bbcb9d7723c2248900fe410b754655, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  cam: {fileID: 5876361738369797246}
+  count: 1
   Damage: 10
   fireRate: 15
-  count: 1
-  cam: {fileID: 5876361738369797246}
-  attackParticle: {fileID: 1982235634}
   impact: {fileID: 1581548236}
   abilityBar: {fileID: 1272112133}
+  attackParticle: {fileID: 1982235634}
 --- !u!4 &111361083 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 658be713590a49c469d1eff5b1b5a502, type: 3}
@@ -10280,13 +10280,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f1bbcb9d7723c2248900fe410b754655, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  cam: {fileID: 6320354423223324667}
+  count: 1
   Damage: 10
   fireRate: 15
-  count: 1
-  cam: {fileID: 6320354423223324667}
-  attackParticle: {fileID: 595155489}
   impact: {fileID: 1581548236}
   abilityBar: {fileID: 1272112133}
+  attackParticle: {fileID: 595155489}
 --- !u!1 &143635069
 GameObject:
   m_ObjectHideFlags: 0
@@ -10472,9 +10472,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 850219632}
-  distance: {fileID: 1516685814}
   Player: {fileID: 6320354423223324668}
   realArrow: {fileID: 164892330}
+  distance: {fileID: 1516685814}
 --- !u!1 &190344214
 GameObject:
   m_ObjectHideFlags: 0
@@ -10910,13 +10910,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f1bbcb9d7723c2248900fe410b754655, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  cam: {fileID: 5876361738369797246}
+  count: 1
   Damage: 10
   fireRate: 15
-  count: 1
-  cam: {fileID: 5876361738369797246}
-  attackParticle: {fileID: 1982235634}
   impact: {fileID: 1581548236}
   abilityBar: {fileID: 1272112133}
+  attackParticle: {fileID: 1982235634}
 --- !u!1 &319280536
 GameObject:
   m_ObjectHideFlags: 0
@@ -16631,7 +16631,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5e86394256e1a1c48b3b3c1ae0e506ea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  g: {fileID: 929928714}
+  obj: {fileID: 929928714}
 --- !u!1 &510617741
 GameObject:
   m_ObjectHideFlags: 0
@@ -27025,13 +27025,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f1bbcb9d7723c2248900fe410b754655, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  cam: {fileID: 6016209640783433691}
+  count: 1
   Damage: 10
   fireRate: 15
-  count: 1
-  cam: {fileID: 6016209640783433691}
-  attackParticle: {fileID: 65644227}
   impact: {fileID: 1581548236}
   abilityBar: {fileID: 1272112133}
+  attackParticle: {fileID: 65644227}
 --- !u!1 &664772497
 GameObject:
   m_ObjectHideFlags: 0
@@ -37519,9 +37519,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d2893e8131004a247a79f0e6fece228f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  enemyCurrHealth: 0
   enemyHealth: 100
-  GameOver: {fileID: 443238710}
   enemyMaxHealth: 100
+  GameOver: {fileID: 443238710}
   enemybarhealth: {fileID: 1773318500}
 --- !u!1 &874921355
 GameObject:
@@ -38537,13 +38538,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f1bbcb9d7723c2248900fe410b754655, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  cam: {fileID: 5876361738369797246}
+  count: 1
   Damage: 10
   fireRate: 15
-  count: 1
-  cam: {fileID: 5876361738369797246}
-  attackParticle: {fileID: 1982235634}
   impact: {fileID: 1581548236}
   abilityBar: {fileID: 1272112133}
+  attackParticle: {fileID: 1982235634}
 --- !u!4 &1083803024 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: c4392c41d355f7c4496b1c4a6b871f7f, type: 3}
@@ -39837,13 +39838,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f1bbcb9d7723c2248900fe410b754655, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  cam: {fileID: 6016209640783433691}
+  count: 1
   Damage: 10
   fireRate: 15
-  count: 1
-  cam: {fileID: 6016209640783433691}
-  attackParticle: {fileID: 65644227}
   impact: {fileID: 1581548236}
   abilityBar: {fileID: 1272112133}
+  attackParticle: {fileID: 65644227}
 --- !u!1 &1272112130
 GameObject:
   m_ObjectHideFlags: 0
@@ -45368,7 +45369,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5e86394256e1a1c48b3b3c1ae0e506ea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  g: {fileID: 1865388934}
+  obj: {fileID: 1865388934}
 --- !u!1 &1470512485 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 658be713590a49c469d1eff5b1b5a502, type: 3}
@@ -45386,13 +45387,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f1bbcb9d7723c2248900fe410b754655, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  cam: {fileID: 6320354423223324667}
+  count: 1
   Damage: 10
   fireRate: 15
-  count: 1
-  cam: {fileID: 6320354423223324667}
-  attackParticle: {fileID: 595155489}
   impact: {fileID: 1581548236}
   abilityBar: {fileID: 1272112133}
+  attackParticle: {fileID: 595155489}
 --- !u!1 &1496566900
 GameObject:
   m_ObjectHideFlags: 0
@@ -46068,9 +46069,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8abe8a9bdd9deac46af628e10316e198, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  GameOver: {fileID: 500871707}
   clock: {fileID: 1762464149}
   subtractSecond: 0
-  GameOver: {fileID: 500871707}
 --- !u!1 &1516685812
 GameObject:
   m_ObjectHideFlags: 0
@@ -46222,13 +46223,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f1bbcb9d7723c2248900fe410b754655, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  cam: {fileID: 6016209640783433691}
+  count: 1
   Damage: 10
   fireRate: 15
-  count: 1
-  cam: {fileID: 6016209640783433691}
-  attackParticle: {fileID: 65644227}
   impact: {fileID: 1581548236}
   abilityBar: {fileID: 1272112133}
+  attackParticle: {fileID: 65644227}
 --- !u!1 &1553485966
 GameObject:
   m_ObjectHideFlags: 0
@@ -46796,9 +46797,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 850219632}
-  distance: {fileID: 1516685814}
   Player: {fileID: 6016209640783433692}
   realArrow: {fileID: 1649038159}
+  distance: {fileID: 1516685814}
 --- !u!1 &1688935955
 GameObject:
   m_ObjectHideFlags: 0
@@ -47115,7 +47116,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5e86394256e1a1c48b3b3c1ae0e506ea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  g: {fileID: 1762464148}
+  obj: {fileID: 1762464148}
 --- !u!1 &1725695908
 GameObject:
   m_ObjectHideFlags: 0
@@ -47365,7 +47366,6 @@ GameObject:
   - component: {fileID: 1762464151}
   - component: {fileID: 1762464150}
   - component: {fileID: 1762464149}
-  - component: {fileID: 1762464152}
   m_Layer: 5
   m_Name: CountdownText
   m_TagString: Untagged
@@ -47489,19 +47489,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 428.38455}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1762464152
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1762464148}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5e86394256e1a1c48b3b3c1ae0e506ea, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  g: {fileID: 1762464148}
 --- !u!1 &1773318498
 GameObject:
   m_ObjectHideFlags: 0
@@ -47642,6 +47629,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 72563da3c0e2f524290a22064df96820, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  barhealth: {fileID: 1789259559}
+  playerCurrHealth: 0
 --- !u!114 &1789259559
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -53439,13 +53428,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f1bbcb9d7723c2248900fe410b754655, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  cam: {fileID: 6320354423223324667}
+  count: 1
   Damage: 10
   fireRate: 15
-  count: 1
-  cam: {fileID: 6320354423223324667}
-  attackParticle: {fileID: 595155489}
   impact: {fileID: 1581548236}
   abilityBar: {fileID: 1272112133}
+  attackParticle: {fileID: 595155489}
 --- !u!1 &2049564489
 GameObject:
   m_ObjectHideFlags: 0
@@ -58500,7 +58489,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5e86394256e1a1c48b3b3c1ae0e506ea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  g: {fileID: 1516685812}
+  obj: {fileID: 1516685812}
 --- !u!1 &2146258814
 GameObject:
   m_ObjectHideFlags: 0
@@ -58631,9 +58620,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 850219632}
-  distance: {fileID: 1516685814}
   Player: {fileID: 5876361738369797241}
   realArrow: {fileID: 1864698331598387958}
+  distance: {fileID: 1516685814}
 --- !u!4 &1502289334777756632
 Transform:
   m_ObjectHideFlags: 0

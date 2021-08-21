@@ -12,8 +12,10 @@ public class disableImage : MonoBehaviour
         if (Pause.isPaused)
         {
             element.enabled = false;
-        }else{
+        }
+        else
+        {
             element.enabled = true;
+            }
         }
     }
-}

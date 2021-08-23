@@ -2792,9 +2792,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cam: {fileID: 691574780}
-  count: 0
   Damage: 10
   fireRate: 15
+  tracerRound: {fileID: 7553320630819780062, guid: 414eed93edc6a8a4099436cc2a7c0f10, type: 3}
+  gunBarrel: {fileID: 1938107967}
   impact: {fileID: 1848751838}
   abilityBar: {fileID: 296167120}
   attackParticle: {fileID: 1508663083}
@@ -3329,7 +3330,7 @@ PrefabInstance:
     - target: {fileID: -7511558181221131132, guid: 2208a5763b30869488b1ce44497f9aa6, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 2a8d39ba393ef3c49a3f930c8b4cb9bc, type: 2}
+      objectReference: {fileID: 2100000, guid: aa52b65e74ae1e24d93559dc8e0b2317, type: 2}
     - target: {fileID: 919132149155446097, guid: 2208a5763b30869488b1ce44497f9aa6, type: 3}
       propertyPath: m_Name
       value: DmgPickup
@@ -4398,43 +4399,43 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: c4392c41d355f7c4496b1c4a6b871f7f, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 1.972
+      value: 2.0414734
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: c4392c41d355f7c4496b1c4a6b871f7f, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.2800002
+      value: -0.280015
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: c4392c41d355f7c4496b1c4a6b871f7f, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 2.191
+      value: 2.1874733
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: c4392c41d355f7c4496b1c4a6b871f7f, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.46118373
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: c4392c41d355f7c4496b1c4a6b871f7f, type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0.46102282
+      value: -0.5
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: c4392c41d355f7c4496b1c4a6b871f7f, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.53617543
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: c4392c41d355f7c4496b1c4a6b871f7f, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0.53598833
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: c4392c41d355f7c4496b1c4a6b871f7f, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
-      value: -89.98
+      value: -90
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: c4392c41d355f7c4496b1c4a6b871f7f, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: 98.6
+      value: 180
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: c4392c41d355f7c4496b1c4a6b871f7f, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
+      value: -90
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: c4392c41d355f7c4496b1c4a6b871f7f, type: 3}
       propertyPath: m_Name
@@ -4469,9 +4470,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cam: {fileID: 691574780}
-  count: 0
   Damage: 10
   fireRate: 15
+  tracerRound: {fileID: 871069733774213228, guid: 0f3d581e0c0be1a4d8fb2d51904d1707, type: 3}
+  gunBarrel: {fileID: 1053342173}
   impact: {fileID: 1848751838}
   abilityBar: {fileID: 296167120}
   attackParticle: {fileID: 1508663083}
@@ -10879,6 +10881,36 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1044379785}
   m_CullTransparentMesh: 1
+--- !u!1 &1053342173
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1053342174}
+  m_Layer: 0
+  m_Name: GunBarrel
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1053342174
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1053342173}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -9.11, y: -0.29, z: 2.15}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 686761953}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1068603386
 GameObject:
   m_ObjectHideFlags: 0
@@ -23905,9 +23937,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cam: {fileID: 691574780}
-  count: 0
   Damage: 10
   fireRate: 15
+  tracerRound: {fileID: 7443098283628504599, guid: 4a251d7faed93be47bab1ba9ad1a29e9, type: 3}
+  gunBarrel: {fileID: 1748414993}
   impact: {fileID: 1848751838}
   abilityBar: {fileID: 296167120}
   attackParticle: {fileID: 1508663083}
@@ -24045,6 +24078,36 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1734294295}
   m_CullTransparentMesh: 1
+--- !u!1 &1748414993
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1748414994}
+  m_Layer: 0
+  m_Name: GunBarrel
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1748414994
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1748414993}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 40.75, y: 0.46, z: 5.71}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1696520152}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1762217169
 GameObject:
   m_ObjectHideFlags: 0
@@ -25115,6 +25178,36 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1936530775}
   m_CullTransparentMesh: 1
+--- !u!1 &1938107967
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1938107968}
+  m_Layer: 0
+  m_Name: GunBarrel
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1938107968
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1938107967}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.08, y: 0.468, z: 5.96}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1253154873}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1970042591
 GameObject:
   m_ObjectHideFlags: 0

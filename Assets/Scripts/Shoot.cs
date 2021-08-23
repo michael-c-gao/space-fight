@@ -58,7 +58,7 @@ public class Shoot : MonoBehaviour
     {
         weaponCheck();
 
-        if (activeWeapon && (Time.time >= nextShot) && !GameOver.isGameOver)
+        if (activeWeapon && (Time.time >= nextShot) && !GameOver.isGameOver && !Pause.isPaused)
         {
             nextShot = Time.time + 4 / fireRate;
             attackParticle.Play();

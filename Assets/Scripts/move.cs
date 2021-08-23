@@ -39,13 +39,13 @@ public class move : MonoBehaviour
             other.gameObject.SetActive(false);
         }
 
-        if (other.gameObject.CompareTag("SpeedPickup"))
+        else if (other.gameObject.CompareTag("SpeedPickup"))
         {
             powerupSpeed += 20;
             other.gameObject.SetActive(false);
         }
 
-        if (other.gameObject.CompareTag("DmgPickup"))
+        else if (other.gameObject.CompareTag("DmgPickup"))
         {
             PlayerAttack.attackpickup += 5;
             other.gameObject.SetActive(false);

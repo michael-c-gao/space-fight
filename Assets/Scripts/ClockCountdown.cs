@@ -9,10 +9,14 @@ public class ClockCountdown : MonoBehaviour
     public TextMeshProUGUI clock;
     public bool subtractSecond = false;
     public static int timeLeft = 100;
+    public GameObject[] powerups;
+    public int arrayLen;
 
     void Start()
     {
         timeLeft = 100;
+        arrayLen = powerups.Length;
+
     }
 
     IEnumerator Countdown()
@@ -21,6 +25,20 @@ public class ClockCountdown : MonoBehaviour
         timeLeft -= 1;
         yield return new WaitForSeconds(1);
         subtractSecond = false;
+    }
+
+    void Spawn()
+    {
+        if (timeLeft == 60 || timeLeft == 30)
+        {
+            for(int i = 0; i < arrayLen; i++)
+            {
+                if (!(powerups[i].activeSelf))
+                {
+                    powerups[i].SetActive(true);
+                }
+            }
+        }
     }
 
     void Update()
@@ -34,5 +52,7 @@ public class ClockCountdown : MonoBehaviour
         {
             GameOver.Setup();
         }
+
+        Spawn();
     }
 }

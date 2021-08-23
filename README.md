@@ -20,7 +20,7 @@ What to Add:
 <br/>~~powerup recharge bars~~
 <br/>~~thruster boosts~~
 <br/>~~Special power icons/abilities~~
-<br/>Player weapon tracers/shots
+<br/>~~Player weapon tracers/shots~~
 <br/>game juice
 <br/>Enemy AI
 <br/>Multiplayer (look into how to do this)

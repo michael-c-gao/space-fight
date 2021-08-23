@@ -5,9 +5,14 @@ using UnityEngine.SceneManagement;
 
 public class Menu : MonoBehaviour
 {
-    public void Play()
+    public void PvE()
     {
         SceneManager.LoadScene("LevelSelect");
+    }
+
+    public void PvP()
+    {
+        SceneManager.LoadScene("OnlineLevelSelect");
     }
 
     public void Tutorial()
@@ -20,7 +25,8 @@ public class Menu : MonoBehaviour
         Application.Quit();
     }
 
-
-   
-
+    public void returnToMenu()
+    {
+        SceneManager.LoadScene("Menu");
+    }
 }

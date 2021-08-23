@@ -231,7 +231,7 @@ GameObject:
   - component: {fileID: 260918261}
   - component: {fileID: 260918260}
   m_Layer: 5
-  m_Name: Text (TMP)
+  m_Name: MenuText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -366,7 +366,7 @@ GameObject:
   - component: {fileID: 291762570}
   - component: {fileID: 291762569}
   m_Layer: 5
-  m_Name: RedPlayer
+  m_Name: RedPlayerButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -698,7 +698,7 @@ GameObject:
   - component: {fileID: 596861648}
   - component: {fileID: 596861647}
   m_Layer: 5
-  m_Name: ReseT
+  m_Name: ResetButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -831,7 +831,7 @@ GameObject:
   - component: {fileID: 754567890}
   - component: {fileID: 754567889}
   m_Layer: 5
-  m_Name: GreenPlayer
+  m_Name: GreenPlayerButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -964,7 +964,7 @@ GameObject:
   - component: {fileID: 854172738}
   - component: {fileID: 854172737}
   m_Layer: 5
-  m_Name: Start
+  m_Name: StartButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1096,7 +1096,7 @@ GameObject:
   - component: {fileID: 928592091}
   - component: {fileID: 928592090}
   m_Layer: 5
-  m_Name: Text (TMP)
+  m_Name: CharacterSelectText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1231,7 +1231,7 @@ GameObject:
   - component: {fileID: 967074062}
   - component: {fileID: 967074061}
   m_Layer: 5
-  m_Name: BluePlayer
+  m_Name: BluePlayerButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1363,7 +1363,7 @@ GameObject:
   - component: {fileID: 1071946417}
   - component: {fileID: 1071946416}
   m_Layer: 5
-  m_Name: Text (TMP)
+  m_Name: RPText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1623,7 +1623,7 @@ GameObject:
   - component: {fileID: 1429798021}
   - component: {fileID: 1429798020}
   m_Layer: 5
-  m_Name: RawImage
+  m_Name: BackgroundImage
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1757,7 +1757,7 @@ GameObject:
   - component: {fileID: 1481753244}
   - component: {fileID: 1481753243}
   m_Layer: 5
-  m_Name: Menu
+  m_Name: MenuButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2073,7 +2073,7 @@ GameObject:
   - component: {fileID: 1732326787}
   - component: {fileID: 1732326786}
   m_Layer: 5
-  m_Name: Text (TMP)
+  m_Name: ResetText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2207,7 +2207,7 @@ GameObject:
   - component: {fileID: 1808947672}
   - component: {fileID: 1808947671}
   m_Layer: 5
-  m_Name: Text (TMP)
+  m_Name: StartText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2341,7 +2341,7 @@ GameObject:
   - component: {fileID: 1868325502}
   - component: {fileID: 1868325501}
   m_Layer: 5
-  m_Name: Text (TMP)
+  m_Name: BPText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2475,7 +2475,7 @@ GameObject:
   - component: {fileID: 1877514065}
   - component: {fileID: 1877514064}
   m_Layer: 5
-  m_Name: Text (TMP)
+  m_Name: GPText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

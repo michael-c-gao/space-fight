@@ -5,14 +5,12 @@ using UnityEngine;
 public class loadCharacter : MonoBehaviour
 {
     public GameObject[] characterLoad;
-
+    public static int character;
 
     void Start()
     {
         ClockCountdown.timeLeft = 100;
-        int character = PlayerPrefs.GetInt("character");
+        character = PlayerPrefs.GetInt("character");
         characterLoad[character].SetActive(true);
     }
-
-    
 }

@@ -21,6 +21,8 @@ What to Add:
 <br/>~~thruster boosts~~
 <br/>~~Special power icons/abilities~~
 <br/>~~Player weapon tracers/shots~~
+<br/>~~Enemy "AI"~~
+<br/>Emeny that shoots at player
+<br/>Multiplayer
 <br/>game juice
-<br/>Enemy AI
-<br/>Multiplayer (look into how to do this)
+<br/> finishing tocuhes

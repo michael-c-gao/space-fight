@@ -7,10 +7,16 @@ public class enemyMovement : MonoBehaviour
     public Transform target;
     public GameObject[] targetArray;
     public float movementSpeed = 10.0f;
-    public float rotationalDamp = 0.4f;
-    Vector3 newVector;
-    float angleBetween;
+    public float rotationOffset = 0.4f;
+    Vector3 dist;
+    float fov;
+    float enemyFOV;
     public GameObject gunPos;
+    bool subtractSecond = false;
+    public TrailRenderer tracerRound;
+    public GameObject gunBarrel;
+    public GameObject impact;
+
 
     void Start()
     {
@@ -19,17 +25,27 @@ public class enemyMovement : MonoBehaviour
 
     void Update()
     {
-        RotateTowardsPlayer();
-        MoveTowardsPlayer();
-        IsInFront();
+        if (!Pause.isPaused && !GameOver.isGameOver)
+        {
+            RotateTowardsPlayer();
+            MoveTowardsPlayer();
+            LookingAt();
+        }
+    }
 
+    IEnumerator Countdown()
+    {
+        subtractSecond = true;
+        PlayerStats.Health -= 10;
+        yield return new WaitForSeconds(1);
+        subtractSecond = false;
     }
 
     void RotateTowardsPlayer()
     {
         Vector3 movePosition = target.position - transform.position;
         Quaternion rotation = Quaternion.LookRotation(movePosition);
-        transform.rotation = Quaternion.Slerp(transform.rotation, rotation, rotationalDamp * Time.deltaTime);
+        transform.rotation = Quaternion.Slerp(transform.rotation, rotation, rotationOffset * Time.deltaTime);
     }
 
     void MoveTowardsPlayer()
@@ -40,37 +56,33 @@ public class enemyMovement : MonoBehaviour
         }
     }
 
-    bool IsInFront()
+    void LookingAt()
     {
-        newVector = transform.position - target.position;
-        angleBetween = Vector3.Angle(transform.forward, newVector);
-        float a = Mathf.Abs(angleBetween);
-        bool retVal = false;
-        if (Mathf.Abs(angleBetween) > 150 && Mathf.Abs(angleBetween) < 240)
+        dist = transform.position - target.position;
+        fov = Vector3.Angle(transform.forward, dist);
+        enemyFOV = Mathf.Abs(fov);
+        if (enemyFOV > 150 && enemyFOV < 240)
         {
-            Shot();
-            Debug.DrawLine(transform.position, target.position, Color.red);
-            retVal = true;
+            Shooting();
+            //Debug.DrawLine(transform.position, target.position, Color.red);
         }
-
-        return retVal;
     }
 
-    bool Shot()
+    void Shooting()
     {
         RaycastHit hit;
-        Vector3 direction = target.position - transform.position;
-        bool retval = false;
-        
         if (Physics.Raycast(gunPos.transform.position, transform.forward, out hit))
         {
-            if (hit.transform.CompareTag("MainCamera")) {
-                Debug.DrawRay(gunPos.transform.position, transform.forward * 10000, Color.green);
-                retval = true;
+            if (hit.transform.CompareTag("MainCamera") && !subtractSecond) {
+                StartCoroutine(Countdown());
+                var tracer = Instantiate(tracerRound, gunBarrel.transform.position, Quaternion.identity);
+                tracer.AddPosition(gunBarrel.transform.position);
+                tracer.transform.position = hit.point;
+                //GameObject impactMark = Instantiate(impact, hit.point, Quaternion.LookRotation(hit.normal));
+                //Destroy(impactMark, 3f);
+                //Debug.DrawRay(gunPos.transform.position, transform.forward * 10000, Color.green);
             }
         }
-        Debug.Log(retval);
-        return retval;
-
     }
+
 }

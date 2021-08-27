@@ -48707,6 +48707,36 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c4392c41d355f7c4496b1c4a6b871f7f, type: 3}
+--- !u!1 &1922587913
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1922587914}
+  m_Layer: 0
+  m_Name: gunBarrel
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1922587914
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1922587913}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0.49}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 2140707863}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1950641231
 GameObject:
   m_ObjectHideFlags: 0
@@ -53963,6 +53993,9 @@ MonoBehaviour:
   movementSpeed: 2
   rotationalDamp: 0.75
   gunPos: {fileID: 2140707859}
+  tracerRound: {fileID: 871069733774213228, guid: 0f3d581e0c0be1a4d8fb2d51904d1707, type: 3}
+  gunBarrel: {fileID: 1922587913}
+  impact: {fileID: 1581548236}
 --- !u!114 &1983704292
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -59181,7 +59214,8 @@ Transform:
   m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
   m_LocalPosition: {x: 0.394, y: 0, z: 0.636}
   m_LocalScale: {x: 0.3, y: 0.3, z: 0.3}
-  m_Children: []
+  m_Children:
+  - {fileID: 1922587914}
   m_Father: {fileID: 1983704290}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}

@@ -20,7 +20,7 @@ public class test : MonoBehaviour
 
     void Update()
     {
-        if (!GameOver.isGameOver)
+        if (!GameOver.isGameOver && !Pause.isPaused)
         {
             rotationSensitivity = SensSlider.sliderValue;
             float Xaxis = Input.GetAxis("Mouse X") * rotationSensitivity * Time.deltaTime;

@@ -20,13 +20,10 @@ public class dash : MonoBehaviour
     IEnumerator Dash()
     {
         float starT = Time.time;
-
         while (Time.time < starT + dashTime)
         {
             movementScript.CC.Move(movementScript.movement * dashSpeed * Time.deltaTime);
             dashParticle.Emit(1);
-
-
             yield return null;
         }
     }
@@ -34,15 +31,14 @@ public class dash : MonoBehaviour
     void Update()
     {
 
-        if (Input.GetKeyDown(KeyCode.Space) && !GameOver.isGameOver)
+        if (Input.GetKeyDown(KeyCode.Space) && !GameOver.isGameOver && !Pause.isPaused)
         {
             if (Time.time > lastDashed + cooldown)
             {
                 StartCoroutine(Dash());
                 lastDashed = Time.time;
             }
-
-
         }
     }
+
 }

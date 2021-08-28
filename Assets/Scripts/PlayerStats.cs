@@ -5,7 +5,6 @@ using TMPro;
 
 public class PlayerStats : MonoBehaviour
 {
-
     public float startingHealth;
     public float maxHealth;
     public static float healthmax;
@@ -19,20 +18,17 @@ public class PlayerStats : MonoBehaviour
         Health = startingHealth;
     }
 
-   
     void FixedUpdate()
     {
-        
         if(Health > maxHealth)
         {
             Health = maxHealth;
         }
-
-        
 
         if (Health <= 0)
         {
             GameOver.Setup();
         }
     }
+
 }

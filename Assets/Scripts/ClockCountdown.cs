@@ -16,7 +16,6 @@ public class ClockCountdown : MonoBehaviour
     {
         timeLeft = 100;
         arrayLen = powerups.Length;
-
     }
 
     IEnumerator Countdown()

@@ -5,6 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class test2 : MonoBehaviour
 {
+    //rewrite all of this later
     public GameObject[] buttonArray;
     public GameObject[] PlayerArray;
     public GameObject resetButton;

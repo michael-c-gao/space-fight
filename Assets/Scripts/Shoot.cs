@@ -45,67 +45,71 @@ public class Shoot : MonoBehaviour
         }
     }
 
-    void weaponCheck()
+    void weaponCheck(int currGun)
     {
-        if (Gun.currWeapon != 1)
+        switch (currGun)
         {
-            activeWeapon = Input.GetMouseButtonDown(0);
-            print(activeWeapon);
-        }
-        else
-        {
-            activeWeapon = Input.GetMouseButton(0);
-            
+            case 0:
+                activeWeapon = Input.GetMouseButtonDown(0);
+                swapADS();
+                break;
+            case 1:
+                activeWeapon = Input.GetMouseButton(0);
+                swapADS();
+                break;
+            case 2:
+                activeWeapon = Input.GetMouseButtonDown(0);
+                ADS();
+                break;
         }
     }
 
     void ADS()
     {
-
-        if(Gun.currWeapon == 2){
-            if (Input.GetMouseButtonDown(2) && !isADS) {
+        if (Input.GetMouseButtonDown(2)) {
+            if (!isADS) {
                 cam.fieldOfView = 30.0f;
-                sniperScope.SetActive(true);
-                isADS = true;
-                swappedADS = true;
-
             }
-            else if (Input.GetMouseButtonDown(2) && isADS) {
-                cam.fieldOfView = 60.0f;
-                sniperScope.SetActive(false);
-                isADS = false;
-                swappedADS = false;
-            }
-        }
-        else
-        {
-            if (swappedADS)
+            else
             {
-                //bool check so camera is not contulally set to 60 degrees over and over
-                sniperScope.SetActive(false);
                 cam.fieldOfView = 60.0f;
-                isADS = false;
-                swappedADS = false;
             }
+            sniperScope.SetActive(!isADS);
+            isADS = !isADS;
+            swappedADS = !swappedADS;
         }
     }
 
+    void swapADS()
+    {
+        if (swappedADS)
+        {
+            //bool check so camera is not continually set to 60 degrees over and over
+            sniperScope.SetActive(false);
+            cam.fieldOfView = 60.0f;
+            isADS = false;
+            swappedADS = false;
+        }
+    }
+
+
     void Update()
     {
-        weaponCheck();
-        ADS();
-        if (activeWeapon && (Time.time >= nextShot) && !GameOver.isGameOver && !Pause.isPaused)
-        {
-            nextShot = Time.time + 4 / fireRate;
-            attackParticle.Play();
-            shootGun();
-            if (isADS && Gun.currWeapon == 2)
+        if (!GameOver.isGameOver && !Pause.isPaused) {
+            weaponCheck(Gun.currWeapon);
+            if (activeWeapon && (Time.time >= nextShot) && !GameOver.isGameOver && !Pause.isPaused)
             {
-                sniperScope.SetActive(false);
-                cam.fieldOfView = 60.0f;
+                nextShot = Time.time + 4 / fireRate;
+                attackParticle.Play();
+                shootGun();
+                if (isADS && Gun.currWeapon == 2)
+                {
+                    sniperScope.SetActive(false);
+                    cam.fieldOfView = 60.0f;
+                }
             }
-        }
 
-        abilityBar.fillAmount = (count / maxCount);
+            abilityBar.fillAmount = (count / maxCount);
+        }
     }
 }

@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class TutorialManager : MonoBehaviour
 {
-
+    //rewrite this all later
     public GameObject[] tutorialArray;
     private int tutorialIndex = 0;
     private static bool pressedW = false;

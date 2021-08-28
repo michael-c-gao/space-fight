@@ -13,7 +13,6 @@ public class Pause : MonoBehaviour
     void Start()
     {
         pausemenu.SetActive(false);
-        
     }
 
     public void PauseGame()
@@ -50,17 +49,10 @@ public class Pause : MonoBehaviour
         inControls = false;
     }
 
-
-
-
     public void QuitGame()
     {
         Application.Quit();
     }
-
-
-
-
 
     void Update()
     {

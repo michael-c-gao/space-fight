@@ -22,5 +22,6 @@ What to Add:
 <br/>~~Special power icons/abilities~~
 <br/>~~Player weapon tracers/shots~~
 <br/>~~Enemy "AI" that follows and shoots at player~~
+<br/>left-hand projectile special powers
 <br/>Multiplayer!
 <br/>Polish (game juice, better models, effects, etc.)

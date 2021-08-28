@@ -6,7 +6,6 @@ using UnityEngine.UI;
 public class move : MonoBehaviour
 {
     public CharacterController CC;
-
     public float movementSpeed;
     public float startSpeed;
     public float boostSpeed;
@@ -16,6 +15,8 @@ public class move : MonoBehaviour
     public bool boostable = true;
     public bool subtractSecond = false;
     public bool powerActive = false;
+    public GameObject[] gunArray;
+    private Shoot shoot;
 
     public Image boostBar;
 
@@ -30,29 +31,26 @@ public class move : MonoBehaviour
         movementSpeed = startSpeed;
     }
 
-
     void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.CompareTag("HealthPickup"))
+        switch (other.gameObject.tag)
         {
-            PlayerStats.Health += 20;
-            other.gameObject.SetActive(false);
+            case "HealthPickup":
+                PlayerStats.Health += 20;
+                other.gameObject.SetActive(false);
+                break;
+            case "SpeedPickup":
+                powerupSpeed += 10;
+                other.gameObject.SetActive(false);
+                break;
+            case "DmgPickup":
+                shoot = gunArray[Gun.currWeapon].GetComponent<Shoot>();
+                shoot.Damage += 10;
+                other.gameObject.SetActive(false);
+                Debug.Log("hello!");
+                break;
         }
-
-        else if (other.gameObject.CompareTag("SpeedPickup"))
-        {
-            powerupSpeed += 20;
-            other.gameObject.SetActive(false);
-        }
-
-        else if (other.gameObject.CompareTag("DmgPickup"))
-        {
-            PlayerAttack.attackpickup += 5;
-            other.gameObject.SetActive(false);
-        }
-
     }
-
 
     IEnumerator SpecialPower()
     {
@@ -61,7 +59,6 @@ public class move : MonoBehaviour
         yield return new WaitForSeconds(5);
         powerActive = false;
     }
-
 
     IEnumerator boostRecharge()
     {
@@ -74,13 +71,10 @@ public class move : MonoBehaviour
         boostBar.fillAmount = 1;
     }
 
-
     void Update()
     {
         if (!GameOver.isGameOver && !Pause.isPaused)
         {
-
-
             float horizontal = Input.GetAxis("Horizontal");
             float vertical = Input.GetAxis("Vertical");
             float threedmovement = Input.GetAxis("threedmovement");
@@ -131,4 +125,5 @@ public class move : MonoBehaviour
             CC.Move(moveVector * movementSpeed * Time.deltaTime);
         }
     }
+
 }

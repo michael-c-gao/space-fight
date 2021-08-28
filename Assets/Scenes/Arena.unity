@@ -10287,7 +10287,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cam: {fileID: 6320354423223324667}
-  Damage: 10
+  Damage: 20
   fireRate: 15
   tracerRound: {fileID: 871069733774213228, guid: 0f3d581e0c0be1a4d8fb2d51904d1707, type: 3}
   gunBarrel: {fileID: 1037305708}
@@ -11024,7 +11024,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cam: {fileID: 5876361738369797246}
-  Damage: 10
+  Damage: 5
   fireRate: 15
   tracerRound: {fileID: 7443098283628504599, guid: 4a251d7faed93be47bab1ba9ad1a29e9, type: 3}
   gunBarrel: {fileID: 1625937925}
@@ -27216,7 +27216,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cam: {fileID: 6016209640783433691}
-  Damage: 10
+  Damage: 5
   fireRate: 15
   tracerRound: {fileID: 7443098283628504599, guid: 4a251d7faed93be47bab1ba9ad1a29e9, type: 3}
   gunBarrel: {fileID: 272801294}
@@ -38854,7 +38854,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cam: {fileID: 5876361738369797246}
-  Damage: 10
+  Damage: 20
   fireRate: 15
   tracerRound: {fileID: 871069733774213228, guid: 0f3d581e0c0be1a4d8fb2d51904d1707, type: 3}
   gunBarrel: {fileID: 1421772160}
@@ -40194,7 +40194,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cam: {fileID: 6016209640783433691}
-  Damage: 10
+  Damage: 20
   fireRate: 15
   tracerRound: {fileID: 871069733774213228, guid: 0f3d581e0c0be1a4d8fb2d51904d1707, type: 3}
   gunBarrel: {fileID: 1950641231}
@@ -54115,7 +54115,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cam: {fileID: 6320354423223324667}
-  Damage: 10
+  Damage: 5
   fireRate: 15
   tracerRound: {fileID: 7443098283628504599, guid: 4a251d7faed93be47bab1ba9ad1a29e9, type: 3}
   gunBarrel: {fileID: 1665417854}
@@ -59739,6 +59739,10 @@ MonoBehaviour:
   boostable: 1
   subtractSecond: 0
   powerActive: 0
+  gunArray:
+  - {fileID: 107256429}
+  - {fileID: 305051758}
+  - {fileID: 1083803021}
   boostBar: {fileID: 203048411}
   movement: {x: 0, y: 0, z: 0}
   boostParticle: {fileID: 674025298}
@@ -59994,6 +59998,10 @@ MonoBehaviour:
   boostable: 1
   subtractSecond: 0
   powerActive: 0
+  gunArray:
+  - {fileID: 1552044153}
+  - {fileID: 628261753}
+  - {fileID: 1268524719}
   boostBar: {fileID: 203048411}
   movement: {x: 0, y: 0, z: 0}
   boostParticle: {fileID: 1416647137}
@@ -60319,6 +60327,10 @@ MonoBehaviour:
   boostable: 1
   subtractSecond: 0
   powerActive: 0
+  gunArray:
+  - {fileID: 1470512485}
+  - {fileID: 2010060046}
+  - {fileID: 143410597}
   boostBar: {fileID: 203048411}
   movement: {x: 0, y: 0, z: 0}
   boostParticle: {fileID: 593785896}

@@ -8,7 +8,7 @@ public class Shoot : MonoBehaviour
     private float nextShot = 0f;
 
     public static float count;
-    public float Damage = 10f;
+    public float Damage;
     public float fireRate = 15f;
     public TrailRenderer tracerRound;
     public GameObject gunBarrel;

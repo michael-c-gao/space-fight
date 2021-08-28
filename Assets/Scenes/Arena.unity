@@ -363,7 +363,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1510783950}
-  m_RootOrder: 14
+  m_RootOrder: 15
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
@@ -10183,6 +10183,7 @@ MonoBehaviour:
   tracerRound: {fileID: 7553320630819780062, guid: 414eed93edc6a8a4099436cc2a7c0f10, type: 3}
   gunBarrel: {fileID: 1735198114}
   impact: {fileID: 1581548236}
+  sniperScope: {fileID: 213507493}
   abilityBar: {fileID: 1272112133}
   attackParticle: {fileID: 1982235634}
 --- !u!4 &111361083 stripped
@@ -10291,6 +10292,7 @@ MonoBehaviour:
   tracerRound: {fileID: 871069733774213228, guid: 0f3d581e0c0be1a4d8fb2d51904d1707, type: 3}
   gunBarrel: {fileID: 1037305708}
   impact: {fileID: 1581548236}
+  sniperScope: {fileID: 213507493}
   abilityBar: {fileID: 1272112133}
   attackParticle: {fileID: 595155489}
 --- !u!1 &143635069
@@ -10671,7 +10673,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1510783950}
-  m_RootOrder: 7
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -10863,6 +10865,81 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 209525625}
   m_CullTransparentMesh: 1
+--- !u!1 &213507493
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 213507494}
+  - component: {fileID: 213507496}
+  - component: {fileID: 213507495}
+  m_Layer: 5
+  m_Name: SniperScope
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!224 &213507494
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 213507493}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1510783950}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 2560, y: 1440}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &213507495
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 213507493}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 21300000, guid: 6164d90d4d4c2c148adce082758fd821, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &213507496
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 213507493}
+  m_CullTransparentMesh: 1
 --- !u!1 &236852373
 GameObject:
   m_ObjectHideFlags: 0
@@ -10952,6 +11029,7 @@ MonoBehaviour:
   tracerRound: {fileID: 7443098283628504599, guid: 4a251d7faed93be47bab1ba9ad1a29e9, type: 3}
   gunBarrel: {fileID: 1625937925}
   impact: {fileID: 1581548236}
+  sniperScope: {fileID: 213507493}
   abilityBar: {fileID: 1272112133}
   attackParticle: {fileID: 1982235634}
 --- !u!1 &319280536
@@ -10990,7 +11068,7 @@ RectTransform:
   - {fileID: 1496566901}
   - {fileID: 516318010}
   m_Father: {fileID: 1510783950}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
@@ -16724,7 +16802,7 @@ RectTransform:
   m_Children:
   - {fileID: 929928715}
   m_Father: {fileID: 1510783950}
-  m_RootOrder: 11
+  m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -17141,7 +17219,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1510783950}
-  m_RootOrder: 13
+  m_RootOrder: 14
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -27143,6 +27221,7 @@ MonoBehaviour:
   tracerRound: {fileID: 7443098283628504599, guid: 4a251d7faed93be47bab1ba9ad1a29e9, type: 3}
   gunBarrel: {fileID: 272801294}
   impact: {fileID: 1581548236}
+  sniperScope: {fileID: 213507493}
   abilityBar: {fileID: 1272112133}
   attackParticle: {fileID: 65644227}
 --- !u!1 &664772497
@@ -37523,7 +37602,7 @@ RectTransform:
   - {fileID: 1725695909}
   - {fileID: 1260326718}
   m_Father: {fileID: 1510783950}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -37656,7 +37735,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1510783950}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
@@ -38780,6 +38859,7 @@ MonoBehaviour:
   tracerRound: {fileID: 871069733774213228, guid: 0f3d581e0c0be1a4d8fb2d51904d1707, type: 3}
   gunBarrel: {fileID: 1421772160}
   impact: {fileID: 1581548236}
+  sniperScope: {fileID: 213507493}
   abilityBar: {fileID: 1272112133}
   attackParticle: {fileID: 1982235634}
 --- !u!4 &1083803024 stripped
@@ -40119,6 +40199,7 @@ MonoBehaviour:
   tracerRound: {fileID: 871069733774213228, guid: 0f3d581e0c0be1a4d8fb2d51904d1707, type: 3}
   gunBarrel: {fileID: 1950641231}
   impact: {fileID: 1581548236}
+  sniperScope: {fileID: 213507493}
   abilityBar: {fileID: 1272112133}
   attackParticle: {fileID: 65644227}
 --- !u!1 &1272112130
@@ -40152,7 +40233,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1510783950}
-  m_RootOrder: 10
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -45651,7 +45732,7 @@ RectTransform:
   m_Children:
   - {fileID: 1865388935}
   m_Father: {fileID: 1510783950}
-  m_RootOrder: 8
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -45694,6 +45775,7 @@ MonoBehaviour:
   tracerRound: {fileID: 7553320630819780062, guid: 414eed93edc6a8a4099436cc2a7c0f10, type: 3}
   gunBarrel: {fileID: 1058066269}
   impact: {fileID: 1581548236}
+  sniperScope: {fileID: 213507493}
   abilityBar: {fileID: 1272112133}
   attackParticle: {fileID: 595155489}
 --- !u!1 &1496566900
@@ -46322,6 +46404,7 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_Children:
+  - {fileID: 213507494}
   - {fileID: 319280537}
   - {fileID: 2146258815}
   - {fileID: 1718453277}
@@ -46536,6 +46619,7 @@ MonoBehaviour:
   tracerRound: {fileID: 7553320630819780062, guid: 414eed93edc6a8a4099436cc2a7c0f10, type: 3}
   gunBarrel: {fileID: 2056283508}
   impact: {fileID: 1581548236}
+  sniperScope: {fileID: 213507493}
   abilityBar: {fileID: 1272112133}
   attackParticle: {fileID: 65644227}
 --- !u!1 &1553485966
@@ -46868,7 +46952,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1510783950}
-  m_RootOrder: 6
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -47465,7 +47549,7 @@ RectTransform:
   m_Children:
   - {fileID: 1762464151}
   m_Father: {fileID: 1510783950}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -47918,7 +48002,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1510783950}
-  m_RootOrder: 15
+  m_RootOrder: 16
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
@@ -48008,7 +48092,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1510783950}
-  m_RootOrder: 5
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
@@ -53991,7 +54075,7 @@ MonoBehaviour:
   - {fileID: 6016209640783433689}
   - {fileID: 5876361738369797244}
   movementSpeed: 2
-  rotationalDamp: 0.75
+  rotationOffset: 0.4
   gunPos: {fileID: 2140707859}
   tracerRound: {fileID: 871069733774213228, guid: 0f3d581e0c0be1a4d8fb2d51904d1707, type: 3}
   gunBarrel: {fileID: 1922587913}
@@ -54036,6 +54120,7 @@ MonoBehaviour:
   tracerRound: {fileID: 7443098283628504599, guid: 4a251d7faed93be47bab1ba9ad1a29e9, type: 3}
   gunBarrel: {fileID: 1665417854}
   impact: {fileID: 1581548236}
+  sniperScope: {fileID: 213507493}
   abilityBar: {fileID: 1272112133}
   attackParticle: {fileID: 595155489}
 --- !u!1 &2049564489
@@ -58940,7 +59025,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1510783950}
-  m_RootOrder: 9
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -59103,7 +59188,7 @@ RectTransform:
   m_Children:
   - {fileID: 1516685813}
   m_Father: {fileID: 1510783950}
-  m_RootOrder: 12
+  m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -59250,7 +59335,7 @@ RectTransform:
   - {fileID: 1432458239}
   - {fileID: 627109754}
   m_Father: {fileID: 1510783950}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}

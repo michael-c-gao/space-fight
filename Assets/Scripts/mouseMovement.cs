@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class test : MonoBehaviour
+public class mouseMovement : MonoBehaviour
 {
     private float rotationSensitivity;
     public Transform playerRotate;

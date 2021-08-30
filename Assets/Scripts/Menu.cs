@@ -7,7 +7,7 @@ public class Menu : MonoBehaviour
 {
     public void PvE()
     {
-        SceneManager.LoadScene("LevelSelect");
+        SceneManager.LoadScene("CharacterSelect");
     }
 
     public void PvP()

@@ -92,7 +92,6 @@ public class Shoot : MonoBehaviour
         }
     }
 
-
     void Update()
     {
         if (!GameOver.isGameOver && !Pause.isPaused) {
@@ -108,8 +107,8 @@ public class Shoot : MonoBehaviour
                     cam.fieldOfView = 60.0f;
                 }
             }
-
             abilityBar.fillAmount = (count / maxCount);
         }
     }
+
 }

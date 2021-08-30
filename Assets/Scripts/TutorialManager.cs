@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class TutorialManager : MonoBehaviour
 {
-    //rewrite this all later
     public GameObject[] tutorialArray;
     private int tutorialIndex = 0;
     private static bool pressedW = false;
@@ -20,7 +19,6 @@ public class TutorialManager : MonoBehaviour
         }
     }
 
-
     void SpacePress()
     {
         if (Input.GetKeyUp(KeyCode.Space)){
@@ -28,13 +26,13 @@ public class TutorialManager : MonoBehaviour
         }
     }
 
-
     void WASDPress()
     {
         if (Input.GetKey(KeyCode.W))
         {
             pressedW = true;
         }
+
         if (Input.GetKey(KeyCode.A))
         {
             pressedA = true;
@@ -43,7 +41,7 @@ public class TutorialManager : MonoBehaviour
         {
             pressedS = true;
         }
-        if (Input.GetKey(KeyCode.D))
+         if (Input.GetKey(KeyCode.D))
         {
             pressedD = true;
         }
@@ -51,9 +49,7 @@ public class TutorialManager : MonoBehaviour
         {
             tutorialIndex += 1;
         }
-
     }
-
 
     void Update()
     {
@@ -72,28 +68,25 @@ public class TutorialManager : MonoBehaviour
                 tutorialArray[i].SetActive(false);
             }
         }
-        if (tutorialIndex != 1 && tutorialIndex != 4 && tutorialIndex != 5)
+
+        if (tutorialIndex == 2) {
+            WASDPress();
+        }
+        else if (tutorialIndex == 5)
         {
-            if (Input.GetKeyDown(KeyCode.E))
+            ShiftHold();
+        }
+        else if (tutorialIndex == 6)
+        {
+            SpacePress();
+        }
+        else
+        {
+            if (Input.GetKeyDown(KeyCode.F))
             {
                 tutorialIndex += 1;
             }
         }
-        else
-        {
-            if(tutorialIndex == 1)
-            {
-                WASDPress();
-            }
-            else if(tutorialIndex == 4)
-            {
-                ShiftHold();
-            }
-            else
-            {
-                SpacePress();
-            }
-           
-        }
     }
+
 }

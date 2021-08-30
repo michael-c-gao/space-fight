@@ -47,7 +47,6 @@ public class move : MonoBehaviour
                 shoot = gunArray[Gun.currWeapon].GetComponent<Shoot>();
                 shoot.Damage += 10;
                 other.gameObject.SetActive(false);
-                Debug.Log("hello!");
                 break;
         }
     }

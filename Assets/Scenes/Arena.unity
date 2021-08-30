@@ -10184,7 +10184,6 @@ MonoBehaviour:
   gunBarrel: {fileID: 1735198114}
   impact: {fileID: 1581548236}
   sniperScope: {fileID: 213507493}
-  abilityBar: {fileID: 1272112133}
   attackParticle: {fileID: 1982235634}
 --- !u!4 &111361083 stripped
 Transform:
@@ -10293,7 +10292,6 @@ MonoBehaviour:
   gunBarrel: {fileID: 1037305708}
   impact: {fileID: 1581548236}
   sniperScope: {fileID: 213507493}
-  abilityBar: {fileID: 1272112133}
   attackParticle: {fileID: 595155489}
 --- !u!1 &143635069
 GameObject:
@@ -11030,7 +11028,6 @@ MonoBehaviour:
   gunBarrel: {fileID: 1625937925}
   impact: {fileID: 1581548236}
   sniperScope: {fileID: 213507493}
-  abilityBar: {fileID: 1272112133}
   attackParticle: {fileID: 1982235634}
 --- !u!1 &319280536
 GameObject:
@@ -27222,7 +27219,6 @@ MonoBehaviour:
   gunBarrel: {fileID: 272801294}
   impact: {fileID: 1581548236}
   sniperScope: {fileID: 213507493}
-  abilityBar: {fileID: 1272112133}
   attackParticle: {fileID: 65644227}
 --- !u!1 &664772497
 GameObject:
@@ -38860,7 +38856,6 @@ MonoBehaviour:
   gunBarrel: {fileID: 1421772160}
   impact: {fileID: 1581548236}
   sniperScope: {fileID: 213507493}
-  abilityBar: {fileID: 1272112133}
   attackParticle: {fileID: 1982235634}
 --- !u!4 &1083803024 stripped
 Transform:
@@ -40200,7 +40195,6 @@ MonoBehaviour:
   gunBarrel: {fileID: 1950641231}
   impact: {fileID: 1581548236}
   sniperScope: {fileID: 213507493}
-  abilityBar: {fileID: 1272112133}
   attackParticle: {fileID: 65644227}
 --- !u!1 &1272112130
 GameObject:
@@ -45776,7 +45770,6 @@ MonoBehaviour:
   gunBarrel: {fileID: 1058066269}
   impact: {fileID: 1581548236}
   sniperScope: {fileID: 213507493}
-  abilityBar: {fileID: 1272112133}
   attackParticle: {fileID: 595155489}
 --- !u!1 &1496566900
 GameObject:
@@ -46620,7 +46613,6 @@ MonoBehaviour:
   gunBarrel: {fileID: 2056283508}
   impact: {fileID: 1581548236}
   sniperScope: {fileID: 213507493}
-  abilityBar: {fileID: 1272112133}
   attackParticle: {fileID: 65644227}
 --- !u!1 &1553485966
 GameObject:
@@ -54121,7 +54113,6 @@ MonoBehaviour:
   gunBarrel: {fileID: 1665417854}
   impact: {fileID: 1581548236}
   sniperScope: {fileID: 213507493}
-  abilityBar: {fileID: 1272112133}
   attackParticle: {fileID: 595155489}
 --- !u!1 &2049564489
 GameObject:
@@ -59850,6 +59841,7 @@ GameObject:
   - component: {fileID: 5876361738369797249}
   - component: {fileID: 5876361738369797248}
   - component: {fileID: 5876361738369797250}
+  - component: {fileID: 5876361738369797251}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -59976,6 +59968,21 @@ MonoBehaviour:
   - {fileID: 1083803021}
   minIndex: 0
   maxIndex: 0
+--- !u!114 &5876361738369797251
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5876361738369797244}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5a1d5d85acdf60042bdd1909d4c901af, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxAbility: 50
+  currAbility: 1
+  abilityBar: {fileID: 1272112133}
 --- !u!114 &6016209640783433680
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -60025,6 +60032,7 @@ GameObject:
   - component: {fileID: 6016209640783433698}
   - component: {fileID: 6016209640783433696}
   - component: {fileID: 6016209640783433699}
+  - component: {fileID: 6016209640783433700}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -60235,6 +60243,21 @@ MonoBehaviour:
   - {fileID: 1268524719}
   minIndex: 0
   maxIndex: 0
+--- !u!114 &6016209640783433700
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6016209640783433689}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5a1d5d85acdf60042bdd1909d4c901af, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxAbility: 50
+  currAbility: 1
+  abilityBar: {fileID: 1272112133}
 --- !u!1 &6016209642628851528
 GameObject:
   m_ObjectHideFlags: 0
@@ -60354,6 +60377,7 @@ GameObject:
   - component: {fileID: 6320354423223324674}
   - component: {fileID: 6320354423223324672}
   - component: {fileID: 6320354423223324675}
+  - component: {fileID: 6320354423223324676}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -60564,6 +60588,21 @@ MonoBehaviour:
   - {fileID: 143410597}
   minIndex: 0
   maxIndex: 0
+--- !u!114 &6320354423223324676
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6320354423223324665}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5a1d5d85acdf60042bdd1909d4c901af, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxAbility: 50
+  currAbility: 1
+  abilityBar: {fileID: 1272112133}
 --- !u!1 &7168856366176890192
 GameObject:
   m_ObjectHideFlags: 0

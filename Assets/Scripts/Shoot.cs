@@ -7,19 +7,16 @@ public class Shoot : MonoBehaviour
 
     private float nextShot = 0f;
 
-    public static float count;
+    public static float count = 1;
     public float Damage;
     public float fireRate = 15f;
     public TrailRenderer tracerRound;
     public GameObject gunBarrel;
-
-    public static float maxCount = 50;
     
     public GameObject impact;
     bool activeWeapon = false;
     public GameObject sniperScope;
 
-    public Image abilityBar;
     private static bool isADS = false;
     private static bool swappedADS = false;
     
@@ -37,7 +34,7 @@ public class Shoot : MonoBehaviour
             if (enemy != null)
             {
                 enemy.BulletHit(Damage);
-                count += 1;
+                count += 100;
             }
             tracer.transform.position = hit.point;
             GameObject impactMark = Instantiate(impact, hit.point, Quaternion.LookRotation(hit.normal));
@@ -107,7 +104,6 @@ public class Shoot : MonoBehaviour
                     cam.fieldOfView = 60.0f;
                 }
             }
-            abilityBar.fillAmount = (count / maxCount);
         }
     }
 

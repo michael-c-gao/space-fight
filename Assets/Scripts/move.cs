@@ -48,16 +48,20 @@ public class move : MonoBehaviour
                 shoot.Damage += 10;
                 other.gameObject.SetActive(false);
                 break;
+            case "PowerupPickup":
+                Shoot.count += 10; 
+                other.gameObject.SetActive(false);
+                break;
         }
     }
 
-    IEnumerator SpecialPower()
+    /*IEnumerator SpecialPower()
     {
         powerActive = true;
         movementSpeed = boostSpeed + 15;
         yield return new WaitForSeconds(5);
         powerActive = false;
-    }
+    }*/
 
     IEnumerator boostRecharge()
     {
@@ -111,14 +115,12 @@ public class move : MonoBehaviour
             {
                 StartCoroutine(boostRecharge());
                 accumulatedBoostTime = 0;
-
-
             }
 
-            if (PlayerAttack.abilityActivated)
+            /*if (PlayerAttack.abilityActivated)
             {
                 StartCoroutine(SpecialPower());
-            }
+            }*/
 
             movement = moveVector;
             CC.Move(moveVector * movementSpeed * Time.deltaTime);

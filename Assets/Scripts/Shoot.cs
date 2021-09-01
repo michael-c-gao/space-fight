@@ -34,7 +34,7 @@ public class Shoot : MonoBehaviour
             if (enemy != null)
             {
                 enemy.BulletHit(Damage);
-                count += 100;
+                count += 5;
             }
             tracer.transform.position = hit.point;
             GameObject impactMark = Instantiate(impact, hit.point, Quaternion.LookRotation(hit.normal));

@@ -9,6 +9,7 @@ TagManager:
   - SpeedPickup
   - DmgPickup
   - player
+  - PowerupPickup
   layers:
   - Default
   - TransparentFX

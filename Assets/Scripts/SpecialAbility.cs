@@ -39,9 +39,9 @@ public class SpecialAbility : MonoBehaviour
         if(currAbility >= maxAbility)
         {
             Shoot.count = maxAbility;
+            currAbility = maxAbility;
             Debug.Log("ability can be activated");
             ActiveAbility();    
-
         }
     }
 

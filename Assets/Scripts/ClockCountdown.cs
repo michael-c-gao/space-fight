@@ -10,12 +10,15 @@ public class ClockCountdown : MonoBehaviour
     public bool subtractSecond = false;
     public static int timeLeft = 100;
     public GameObject[] powerups;
-    public int arrayLen;
+    public GameObject[] abilityPowerups;
+    private int arrayLen;
+    private int abilityLen;
 
     void Start()
     {
         timeLeft = 100;
         arrayLen = powerups.Length;
+        abilityLen = abilityPowerups.Length;
     }
 
     IEnumerator Countdown()
@@ -26,15 +29,15 @@ public class ClockCountdown : MonoBehaviour
         subtractSecond = false;
     }
 
-    void Spawn()
+    void Spawn(int modulo, GameObject[] array, int length)
     {
-        if (timeLeft == 60 || timeLeft == 30)
+        if (timeLeft % modulo == 0)
         {
-            for(int i = 0; i < arrayLen; i++)
+            for(int i = 0; i < length; i++)
             {
-                if (!(powerups[i].activeSelf))
+                if (!(array[i].activeSelf))
                 {
-                    powerups[i].SetActive(true);
+                    array[i].SetActive(true);
                 }
             }
         }
@@ -47,11 +50,14 @@ public class ClockCountdown : MonoBehaviour
             StartCoroutine(Countdown());
             clock.text = "Time Remaining: " + (timeLeft);
         }
-        if(timeLeft == 0)
+
+        Spawn(20,powerups,arrayLen);
+        Spawn(10, abilityPowerups, abilityLen) ;
+        
+        if (timeLeft == 0)
         {
             GameOver.Setup();
         }
-
-        Spawn();
     }
+
 }

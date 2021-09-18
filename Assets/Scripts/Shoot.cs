@@ -101,6 +101,8 @@ public class Shoot : MonoBehaviour
                 if (isADS && Gun.currWeapon == 2)
                 {
                     sniperScope.SetActive(false);
+                    isADS = false;
+                    swappedADS = false;
                     cam.fieldOfView = 60.0f;
                 }
             }
